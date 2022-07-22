@@ -1,0 +1,47 @@
+
+// body {
+//   width: 100%;
+//   font-family: ;
+//   background-color: ;
+//   color: ;
+//   letter-spacing: em;
+//   font-size: px;
+//   line-height: ;
+// }
+
+h1,
+h2,
+h3,
+h4,
+p {
+  margin: 0px;
+}
+
+ul {
+  margin: 0px;
+  padding: 0px;
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+  color: currentColor;
+}
+.img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+  width: 100%;
+}
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  white-space: nowrap;
+  clip-path: inset(100%);
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}
