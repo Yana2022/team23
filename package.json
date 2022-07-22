@@ -1,5 +1,5 @@
 {
-  "name": "parcel-project-template",
+  "name": "team23",
   "version": "2.0.0",
   "description": "",
   "homepage": "https://Yana2022.github.io/team23",
@@ -9,13 +9,13 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/goitacademy/parcel-project-template.git"
+    "url": "git+https://github.com/Yana2022/team23.git"
   },
   "keywords": [],
   "author": "Alexander Repeta <alexander.repeta@gmail.com>",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/goitacademy/parcel-project-template/issues"
+    "url": "https://github.com/Yana2022/team23/issues"
   },
   "dependencies": {
     "modern-normalize": "^1.1.0"
