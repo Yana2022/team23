@@ -7,12 +7,13 @@
 
     @include tablet{
         padding-top: 32px;
+        padding-bottom: 10px;
     }
 
     @include desktop {
         justify-content: space-between;
         align-items: baseline;
-        padding-top: 41px;
+        padding-top: 41px;        
     }
 }
 
@@ -51,7 +52,8 @@
         min-height: 100%;
         padding-top: 50px;
         padding-left: 20px;
-        padding-right: 20px;        
+        padding-right: 20px;  
+        z-index: 100;      
         background-color: #E17992;
         transition: transform 250ms $cubic-bezier;
         &.is-hidden{
@@ -164,7 +166,7 @@
 
     &:hover,
     &:focus {
-        color: #D41443;
+        color: $main-red-color;
     }
 
 
