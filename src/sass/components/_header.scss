@@ -17,7 +17,7 @@
     }
 }
 
-.header__btn--tablet{
+.header__box-btn--tablet{
     display: flex;
     align-items: center;
 }
@@ -55,7 +55,8 @@
         padding-right: 20px;  
         z-index: 100;      
         background-color: $menu-bgc;
-        transition: transform 250ms $cubic-bezier;
+        @include animation(transform);
+
         &.is-hidden{
             transform: translateY(0);
         }
@@ -80,20 +81,23 @@
 
 }
 
-.header__button {
+.header__button--basic{
     height: 44px;
-    border: none;
-    border-radius: 22px;
-    background-color: $button-bgc;
-    color: $main-red-color;
-    @include font(700 , 16px ,calc(20 /16) , 0.03);
-    font-family: $main-font-family;
-    cursor: pointer;
+        border: none;
+        border-radius: 22px;
+        background-color: $button-bgc;
+        color: $main-red-color;
+        @include font(700, 16px, calc(20 /16), 0.04);
+        font-family: $main-font-family;
+        cursor: pointer;
 
-    &:hover,
-    &:focus {
-        background-color: $button-hover;
-    }
+        &:hover,
+        &:focus {
+                background-color: $button-hover;
+        }
+}
+
+.header__button {    
 
     @include mobile {
         display: block;
@@ -112,6 +116,7 @@
 
     @include desktop {
         margin-left: 141px;
+        margin-bottom: 0;
     }
 }
 
@@ -119,15 +124,7 @@
     display: none;
     margin-left: 32px;
     padding-left: 37px;
-    padding-right: 37px;
-    height: 44px;
-    border: none;
-    border-radius: 22px;
-    background-color: #ffffff;
-    color: $main-red-color;
-    @include font(700, 16px, calc(20 /16), 0.03);
-    font-family: $main-font-family;
-    cursor: pointer;
+    padding-right: 37px;    
 
     @media (min-width: 768px) and (max-width:1199px){
         display: block;
@@ -144,7 +141,7 @@
 
 .header__item {
 
-    @media (min-width: 320px) and (max-width:1199px) {
+    @media screen and (max-width:1199px) {
         padding-top: 12px;
         padding-bottom: 12px;
         border-bottom: 1px solid $menu-link-border;
@@ -162,7 +159,7 @@
 .header__link {
     @include font(700, 14px, calc(18 /14), 0.03);
     font-family: $main-font-family;
-    color: #ffffff;
+    color: $button-bgc;
 
     &:hover,
     &:focus {
@@ -170,7 +167,7 @@
     }
 
 
-    @media (min-width: 320px) and (max-width:1199px) {
+    @media screen and (max-width:1199px) {
         padding-top: 12px;
         padding-bottom: 12px;
     }
