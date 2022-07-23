@@ -1,0 +1,154 @@
+.section {
+    padding-top: 60px;
+}
+
+.container {
+    margin-left: auto;
+    margin-right: auto;
+    width: 100%;
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
+.link {
+    text-decoration: none;
+}
+
+li {
+    list-style-type: none;
+}
+
+.section__background {
+    background-color: #FFF5F6;
+}
+
+.contact__card {
+    width: 100%;
+    height: 412px;
+    border-radius: 24px;
+    background-color: #FFFFFF;
+    justify-content: center;
+    align-items: center;
+    padding-top: 40px;
+    padding-bottom: 40px;
+    box-shadow: rgba(212, 20, 67, 0.1);
+    margin-bottom: 20px;
+}
+
+.contact__list {
+    margin-top: 0;
+    margin-bottom: 0;
+    padding-left: 32px;
+}
+
+.contact__position__cafe {
+    font-family: $main-font-family;
+    font-style: medium;
+    @include font($weight:500, $size:12px, $height:22px, $spacing:4%);
+    width: 80px;
+    height: 16px;
+    border-radius: 4px;
+    background-color: #F0D1A5;
+    color: #FFFFFF;
+    text-align: center;
+    margin-top: 0;
+    margin-bottom: 20px;
+}
+
+.contact__position__foodtruck {
+    font-family: $main-font-family;
+    font-style: medium;
+    @include font($weight:500, $size:12px, $height:22px, $spacing:4%);
+    width: 130px;
+    height: 16px;
+    border-radius: 4px;
+    background-color: #C2E297;
+    color: #FFFFFF;
+    text-align: center;
+    margin-bottom: 20px;
+    margin-top: 0;
+    margin-bottom: 20px;
+}
+
+.contact__items {
+    font-weight: 500;
+    font-size: 12px;
+    line-height: 18px;
+    color: #000000;
+   
+}
+
+.contact__line {
+    width: 216px;
+    margin-bottom: 24px;
+    border-bottom: 1px solid #E1E1E1;
+
+}
+
+.contact__info {
+    font-family: $main-font-family;
+    @include font($weight:500, $size:12px, $height:18px, $spacing:4%);
+    color:$main-text-color;
+    margin-top: 8px;
+    margin-bottom: 0;
+    padding-bottom: 24px;
+}
+
+.contact__items__time {
+    font-family: $main-font-family;
+    font-style: medium;
+    @include font($weight:500, $size:12px, $height:22px, $spacing:4%);
+    color: $accent-pink;
+    margin-top: 0;
+    margin-bottom: 8px;
+}
+
+.contact__items__last {
+    padding-bottom: 24px;
+}
+
+.contact__link {
+    font-family: $main-font-family;
+    font-style: medium;
+    @include font($weight:500, $size:12px, $height:18px, $spacing:4%);
+    color: #907E82;
+    transition: color 250ms;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+
+    &:hover,
+    &:focus {
+        color: #D46443
+    }
+}
+
+.contact__link {
+    display: block;
+}
+
+.contact__btn__together {
+  margin-top: 12px;
+  margin-left: 78px;
+}
+
+.contact__btn {
+    display: block;
+    font-family: $main-font-family;
+    font-style:bold;
+    @include font($weight:700, $size:16px, $height:21px, $spacing:4%);
+    color: #FFFFFF;
+    width: 161px;
+    height: 44px;
+    border-radius: 22px;
+    border-color: transparent;
+    background-color: #D41342;
+    transition: color 250ms;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+
+    &:hover,
+    &:focus {
+        color:$main-red-color;
+        background-color: #FFFFFF;
+    }
+
+    margin-top: 10px;
+}
