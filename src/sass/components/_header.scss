@@ -1,0 +1,124 @@
+.header__container {
+    display: flex;
+    background-color: #FFB8CA;
+
+
+    @include desktop {
+        justify-content: space-between;
+        align-items: baseline;
+        padding-top: 41px;
+    }
+}
+
+
+.header__box {
+    @media screen and (max-width:1199px) {
+        position: absolute;
+        top: 0;
+        right: 0;
+        background-color: #E17992;
+        padding-top: 50px;
+        padding-left: 20px;
+        padding-right: 20px;
+        min-height: 100%;
+    }
+
+
+    @media (min-width:320px) and (max-width: 767px) {
+        width: 250px;
+    }
+
+    @media (min-width:768px) and (max-width: 1199px) {
+        width: 254px;
+    }
+
+    @include desktop {
+        display: flex;
+        flex-direction: row-reverse;
+        align-items: baseline;
+
+    }
+
+
+}
+
+.header__button {
+    height: 44px;
+    border: none;
+    border-radius: 22px;
+    background-color: #ffffff;
+    color: $main-red-color;
+    @include font(700 , 16px ,calc(20 /16) , 0.03);
+    cursor: pointer;
+
+    &:hover,
+    &:focus {
+        background-color: #ECEBEB;
+    }
+
+    @include mobile {
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        margin-bottom: 20px;
+        padding-left: 43px;
+        padding-right: 43px;
+
+    }
+
+    @include tablet {
+        padding-left: 37px;
+        padding-right: 37px;
+    }
+
+    @include desktop {
+        margin-left: 141px;
+    }
+}
+
+.header__list {
+
+    @include desktop {
+        display: flex;
+        gap: 35px;
+    }
+}
+
+.header__item {
+
+    @media (min-width: 320px) and (max-width:1199px) {
+        padding-top: 12px;
+        padding-bottom: 12px;
+        border-bottom: 1px solid #E18298;
+
+        &:not(:last-child) {
+            margin-bottom: 22px;
+        }
+
+        &:first-child {
+            border-top: 1px solid #E18298;
+        }
+    }
+}
+
+.header__link {
+    @include font(700, 14px, calc(18 /14), 0.03);
+    font-family: Dm Sans, sans;
+    color: #ffffff;
+
+    &:hover,
+    &:focus {
+        color: #D41443;
+    }
+
+
+    @media (min-width: 320px) and (max-width:1199px) {
+        padding-top: 12px;
+        padding-bottom: 12px;
+    }
+
+    @include desktop {
+        padding-top: 20px;
+        padding-bottom: 20px;
+    }
+}
