@@ -2,14 +2,14 @@
     display: flex;
     flex-direction: row;
     padding: 40px 16px;
-
+    
+    .advantages__list {
+        display: flex;
+        flex-direction: row;
+    }
     .section-item {
         flex: 1;
-
-        .icon {
-            margin-bottom: 40px;
-        }
-
+    }
         .weight {
             font-family: Titan One, sans-serif;
             margin-bottom: 16px;
@@ -17,7 +17,31 @@
             font-size: 58px;
             color: #D41443;
         }
-
+        .weight_1::before {
+            content: "";
+                display: block;
+                background: url("/src/images/advantage-pic1.png") no-repeat;
+                width: 33px;
+                height: 50px;
+                margin-bottom: 40px;
+            }
+                        .weight_2::before {
+                            content: "";
+                            display: block;
+                            background: url("/src/images/advantage-pic2.png") no-repeat;
+                            width: 50px;
+                            height: 50px;
+                            margin-bottom: 40px;
+                        }
+                                                .weight_3::before {
+                                                    content: "";
+                                                    display: block;
+                                                    background: url("/src/images/advantage-pic3.png") no-repeat;
+                                                    width: 44px;
+                                                    height: 50px;
+                                                    margin-bottom: 40px;
+                                                }
+        }
         .description {
             font-size: 16px;
             font-weight: 700;
@@ -25,5 +49,4 @@
             max-width: 288px;
             line-height: 28px;
         }
-    }
-}
+    
