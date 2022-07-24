@@ -1,14 +1,25 @@
 <header class="header">
   <div class="container header__container">
-    <a class="header__logo" href="">icecream</a>
+    <a class="header__logo" href="">
+      <svg width="199" height="50" aria-label="открытие бургерного меню">
+        <use href="./images/icons.svg#logo-icecrema"></use>
+      </svg>
+    </a>
     <div class="header__box-btn--tablet">
-      <button class="header__menu-button" type="button" data-open>=</button>
+      <button class="header__menu-button" type="button" data-open>
+        <svg width="20" height="12" aria-label="открытие бургерного меню">
+          <use href="./images/icons.svg#burger-open"></use>
+        </svg>
+      </button>
       <button
         class="header__button--tablet header__button--basic"
         type="button"
         data-menu
       >
         Buy now
+        <svg class="header__button--arrow" width="6" height="8">
+          <use href="./images/icons.svg#arrow"></use>
+        </svg>
       </button>
     </div>
     <div class="header__box" data-mobile-modal>
@@ -17,7 +28,9 @@
         type="button"
         data-close
       >
-        x
+        <svg width="20" height="12" aria-label="закрытие бургерного меню">
+          <use href="./images/icons.svg#burger-close"></use>
+        </svg>
       </button>
       <button
         class="header__button header__button--basic"
@@ -25,6 +38,9 @@
         data-menu
       >
         Buy now
+        <svg class="header__button--arrow" width="6" height="8">
+          <use href="./images/icons.svg#arrow"></use>
+        </svg>
       </button>
       <ul class="header__list">
         <li class="header__item">

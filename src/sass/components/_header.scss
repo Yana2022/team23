@@ -12,7 +12,7 @@
 
     @include desktop {
         justify-content: space-between;
-        align-items: baseline;
+        align-items: center;
         padding-top: 41px;        
     }
 }
@@ -23,19 +23,17 @@
 }
 
 .header__menu-button{
+    
     display: flex;
     justify-content: center;
     align-items: center;
     background-color: transparent;
-    width: 20px;
-    height: 20px;
     border: none;
 
     @include desktop{
         display: none;
     }
 }
-
 
 .header__menu-button--close{
     position: absolute;
@@ -77,8 +75,6 @@
         align-items: baseline;
 
     }
-
-
 }
 
 .header__button--basic{
@@ -129,6 +125,10 @@
     @media (min-width: 768px) and (max-width:1199px){
         display: block;
     }
+}
+
+.header__button--arrow {
+    margin-left: 12px;
 }
 
 .header__list {
