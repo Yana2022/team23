@@ -3,7 +3,17 @@
 }
 
 .container {
+<<<<<<< Updated upstream
     margin-left: auto;
+=======
+    width: 100%;
+
+    @mixin mobile {
+        max-width: 480px;
+    }
+
+    /*margin-left: auto;
+>>>>>>> Stashed changes
     margin-right: auto;
     width: 100%;
     padding-left: 20px;
@@ -23,8 +33,19 @@ li {
 }
 
 .contact__card {
+<<<<<<< Updated upstream
+=======
+    display: flex;
+    flex-direction: column;
+    /*justify-content: center;
+    align-items:flex-start;
+    justify-content: flex-start;*/
+
+>>>>>>> Stashed changes
     width: 100%;
+    /*max-width: 480px;*/
     height: 412px;
+<<<<<<< Updated upstream
     border-radius: 24px;
     background-color: #FFFFFF;
     justify-content: center;
@@ -33,11 +54,25 @@ li {
     padding-bottom: 40px;
     box-shadow: rgba(212, 20, 67, 0.1);
     margin-bottom: 20px;
+=======
+
+
+    padding-top: 40px;
+    padding-bottom: 40px;
+    padding-left: 32px;
+    padding-right: 32px;
+    margin-bottom: 20px;
+
+    border-radius: 24px;
+    background-color: $button-bgc;
+    box-shadow: 0px 8px 30px rgba(212, 20, 67, 0.1);
+>>>>>>> Stashed changes
 }
 
 .contact__list {
     margin-top: 0;
     margin-bottom: 0;
+<<<<<<< Updated upstream
     padding-left: 32px;
 }
 
@@ -45,37 +80,82 @@ li {
     font-family: $main-font-family;
     font-style: medium;
     @include font($weight:500, $size:12px, $height:22px, $spacing:4%);
+=======
+
+}
+
+.contact__position__cafe {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+>>>>>>> Stashed changes
     width: 80px;
     height: 16px;
+
+    margin-top: 0;
+    margin-bottom: 20px;
+
+    font-family: $main-font-family;
+    @include font($weight: 500, $size: 12px, $height: 1.8, $spacing: 0.04em);
+
+
     border-radius: 4px;
+<<<<<<< Updated upstream
     background-color: #F0D1A5;
     color: #FFFFFF;
     text-align: center;
     margin-top: 0;
     margin-bottom: 20px;
+=======
+    background-color: $accent-yellow;
+    color: #ffffff;
+
+>>>>>>> Stashed changes
 }
 
 .contact__position__foodtruck {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
     font-family: $main-font-family;
+<<<<<<< Updated upstream
     font-style: medium;
     @include font($weight:500, $size:12px, $height:22px, $spacing:4%);
+=======
+    @include font($weight: 500, $size: 12px, $height: 1.8, $spacing: 0.04em);
+
+>>>>>>> Stashed changes
     width: 130px;
     height: 16px;
+
+    margin-top: 0;
+    margin-bottom: 20px;
+
+    text-align: center;
     border-radius: 4px;
+<<<<<<< Updated upstream
     background-color: #C2E297;
     color: #FFFFFF;
     text-align: center;
     margin-bottom: 20px;
     margin-top: 0;
     margin-bottom: 20px;
+=======
+    background-color: $accent-green;
+    color: #ffffff;
+
+>>>>>>> Stashed changes
 }
 
 .contact__items {
-    font-weight: 500;
-    font-size: 12px;
-    line-height: 18px;
+    @include font($weight: 500, $size: 12px, $height: 1.5, $spacing: 0.04em);
     color: #000000;
+<<<<<<< Updated upstream
    
+=======
+>>>>>>> Stashed changes
 }
 
 .contact__line {
@@ -87,10 +167,18 @@ li {
 
 .contact__info {
     font-family: $main-font-family;
+<<<<<<< Updated upstream
     @include font($weight:500, $size:12px, $height:18px, $spacing:4%);
     color:$main-text-color;
     margin-top: 8px;
     margin-bottom: 0;
+=======
+    @include font($weight: 500, $size: 12px, $height: 1.5, $spacing: 0.04em);
+    color: $main-text-color;
+
+    margin-top: 8px;
+    /*margin-bottom: 24px;*/
+>>>>>>> Stashed changes
     padding-bottom: 24px;
 }
 
@@ -99,10 +187,18 @@ li {
     font-style: medium;
     @include font($weight:500, $size:12px, $height:22px, $spacing:4%);
     color: $accent-pink;
+
     margin-top: 0;
     margin-bottom: 8px;
 }
 
+<<<<<<< Updated upstream
+=======
+.gap {
+    margin-bottom: 8px;
+}
+
+>>>>>>> Stashed changes
 .contact__items__last {
     padding-bottom: 24px;
 }
@@ -132,12 +228,24 @@ li {
 
 .contact__btn {
     display: block;
+    width: 161px;
+    height: 44px;
+
+    margin-top: 10px;
+
     font-family: $main-font-family;
+<<<<<<< Updated upstream
     font-style:bold;
     @include font($weight:700, $size:16px, $height:21px, $spacing:4%);
     color: #FFFFFF;
     width: 161px;
     height: 44px;
+=======
+    font-style: bold;
+    @include font($weight: 700, $size: 16px, $height: 1.3, $spacing: 0.04em);
+    color: $button-bgc;
+    
+>>>>>>> Stashed changes
     border-radius: 22px;
     border-color: transparent;
     background-color: #D41342;
@@ -149,6 +257,5 @@ li {
         color:$main-red-color;
         background-color: #FFFFFF;
     }
-
-    margin-top: 10px;
+   
 }
