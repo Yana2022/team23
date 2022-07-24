@@ -1,0 +1,23 @@
+#button-up{
+    display: none;
+    justify-content: center;
+    align-items: center;
+    position: fixed;        
+    bottom: 20px;
+    right: 20px;        
+    z-index: 999;
+    width: 40px;
+    height: 40px;       
+    border: none;
+    background-color: $button-hover;
+    cursor: pointer;
+    border-radius: 25%;
+    transform: rotate(-90deg);
+    
+    @include animation(background-color);
+
+    &:hover, &:focus{
+        background-color: $menu-link-border;
+    }
+}
+
