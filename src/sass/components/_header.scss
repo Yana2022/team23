@@ -14,6 +14,10 @@
     justify-content: space-between;
     align-items: center;
 
+    @include mobile{
+        padding-top: 8px;
+    }
+
     @include tablet{
         padding-top: 32px;
         padding-bottom: 10px;
@@ -26,6 +30,7 @@
     }
 }
 
+// кнопки на Планшет (купить и бургер меню)
 .header__box-btn--tablet{
     display: flex;
     align-items: center;
@@ -44,18 +49,21 @@
     }
 }
 
+
+// кнопка закрытия выпадающего меню
 .header__menu-button--close{
     position: absolute;
     top: 20px;
     right: 20px;
 }
 
+// выпадающее меню
 .header__box {
     @media screen and (max-width:1199px) {
         position: absolute;
-        top: 0;
+        top: -100%;
         right: 0;       
-        transform: translateY(-100%);
+        transform: translateY(0);
         min-height: 100%;
         padding-top: 50px;
         padding-left: 20px;
@@ -65,7 +73,7 @@
         @include animation(transform);
 
         &.is-hidden{
-            transform: translateY(0);
+            transform: translateY(100%);
         }
     }
 
@@ -86,6 +94,7 @@
     }
 }
 
+// основной стиль кнопки купить
 .header__button--basic{
     height: 44px;
         border: none;
@@ -102,6 +111,7 @@
         }
 }
 
+// кнопка купить 
 .header__button {    
 
     @include mobile {
@@ -140,6 +150,8 @@
     margin-left: 12px;
 }
 
+
+// Ссылки для десктопа
 .header__list {
 
     @include desktop {
@@ -148,6 +160,7 @@
     }
 }
 
+// стилизация ссылок для выпадающего меню
 .header__item {
 
     @media screen and (max-width:1199px) {
