@@ -1,0 +1,179 @@
+.header__container {
+    display: flex;    
+    justify-content: space-between;
+    align-items: center;
+    
+    background-color: $header-bgc;
+
+    @include tablet{
+        padding-top: 32px;
+        padding-bottom: 10px;
+    }
+
+    @include desktop {
+        justify-content: space-between;
+        align-items: center;
+        padding-top: 41px;        
+    }
+}
+
+.header__box-btn--tablet{
+    display: flex;
+    align-items: center;
+}
+
+.header__menu-button{
+    
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: transparent;
+    border: none;
+
+    @include desktop{
+        display: none;
+    }
+}
+
+.header__menu-button--close{
+    position: absolute;
+    top: 20px;
+    right: 20px;
+}
+
+.header__box {
+    @media screen and (max-width:1199px) {
+        position: absolute;
+        top: 0;
+        right: 0;       
+        transform: translateY(-100%);
+        min-height: 100%;
+        padding-top: 50px;
+        padding-left: 20px;
+        padding-right: 20px;  
+        z-index: 100;      
+        background-color: $menu-bgc;
+        @include animation(transform);
+
+        &.is-hidden{
+            transform: translateY(0);
+        }
+    }
+
+
+    @media (min-width:320px) and (max-width: 767px) {
+        width: 250px;
+    }
+
+    @media (min-width:768px) and (max-width: 1199px) {
+        width: 254px;
+    }
+
+    @include desktop {
+        display: flex;
+        flex-direction: row-reverse;
+        align-items: baseline;
+
+    }
+}
+
+.header__button--basic{
+    height: 44px;
+        border: none;
+        border-radius: 22px;
+        background-color: $button-bgc;
+        color: $main-red-color;
+        @include font(700, 16px, calc(20 /16), 0.04);
+        font-family: $main-font-family;
+        cursor: pointer;
+
+        &:hover,
+        &:focus {
+                background-color: $button-hover;
+        }
+}
+
+.header__button {    
+
+    @include mobile {
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        margin-bottom: 20px;
+        padding-left: 43px;
+        padding-right: 43px;
+
+    }
+
+    @include tablet {
+        padding-left: 37px;
+        padding-right: 37px;
+    }
+
+    @include desktop {
+        margin-left: 141px;
+        margin-bottom: 0;
+    }
+}
+
+.header__button--tablet{
+    display: none;
+    margin-left: 32px;
+    padding-left: 37px;
+    padding-right: 37px;    
+
+    @media (min-width: 768px) and (max-width:1199px){
+        display: block;
+    }
+}
+
+.header__button--arrow {
+    margin-left: 12px;
+}
+
+.header__list {
+
+    @include desktop {
+        display: flex;
+        gap: 35px;
+    }
+}
+
+.header__item {
+
+    @media screen and (max-width:1199px) {
+        padding-top: 12px;
+        padding-bottom: 12px;
+        border-bottom: 1px solid $menu-link-border;
+
+        &:not(:last-child) {
+            margin-bottom: 22px;
+        }
+
+        &:first-child {
+            border-top: 1px solid $menu-link-border;
+        }
+    }
+}
+
+.header__link {
+    @include font(700, 14px, calc(18 /14), 0.03);
+    font-family: $main-font-family;
+    color: $button-bgc;
+
+    &:hover,
+    &:focus {
+        color: $main-red-color;
+    }
+
+
+    @media screen and (max-width:1199px) {
+        padding-top: 12px;
+        padding-bottom: 12px;
+    }
+
+    @include desktop {
+        padding-top: 20px;
+        padding-bottom: 20px;
+    }
+}
