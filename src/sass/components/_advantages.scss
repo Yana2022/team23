@@ -1,20 +1,15 @@
 .advantages-section {
     display: flex;
     flex-direction: row;
-    padding: 40px 16px;
-    
-    .advantages__list {
-        display: flex;
-        flex-direction: row;
-    }
+
     .section-item {
         flex: 1;
     }
         .weight {
             font-family: Titan One, sans-serif;
             margin-bottom: 16px;
-            line-height: 66px;
-            font-size: 58px;
+            line-height: 41px;
+            font-size: 36px;
             color: #D41443;
         }
         .weight_1::before {
@@ -23,7 +18,7 @@
                 background: url("/src/images/advantage-pic1.png") no-repeat;
                 width: 33px;
                 height: 50px;
-                margin-bottom: 40px;
+                margin-bottom: 16px;
             }
                         .weight_2::before {
                             content: "";
@@ -31,7 +26,7 @@
                             background: url("/src/images/advantage-pic2.png") no-repeat;
                             width: 50px;
                             height: 50px;
-                            margin-bottom: 40px;
+                            margin-bottom: 16px;
                         }
                                                 .weight_3::before {
                                                     content: "";
@@ -39,14 +34,19 @@
                                                     background: url("/src/images/advantage-pic3.png") no-repeat;
                                                     width: 44px;
                                                     height: 50px;
-                                                    margin-bottom: 40px;
+                                                    margin-bottom: 16px;
                                                 }
         }
         .description {
-            font-size: 16px;
+            font-size: 12px;
             font-weight: 700;
             font-family: DM Sans, sans-serif;
-            max-width: 288px;
-            line-height: 28px;
+            max-width: 230px;
+            line-height: 20px;
+            margin-bottom: 32px;
         }
     
+   /*.advantages__list {
+        display: flex;
+        flex-direction: row;
+    }*/
