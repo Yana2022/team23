@@ -1,0 +1,29 @@
+.advantages-section {
+    display: flex;
+    flex-direction: row;
+    padding: 40px 16px;
+
+    .section-item {
+        flex: 1;
+
+        .icon {
+            margin-bottom: 40px;
+        }
+
+        .weight {
+            font-family: Titan One, sans-serif;
+            margin-bottom: 16px;
+            line-height: 66px;
+            font-size: 58px;
+            color: #D41443;
+        }
+
+        .description {
+            font-size: 16px;
+            font-weight: 700;
+            font-family: DM Sans, sans-serif;
+            max-width: 288px;
+            line-height: 28px;
+        }
+    }
+}
