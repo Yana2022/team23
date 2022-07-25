@@ -10,18 +10,22 @@ padding-bottom: 40px;
     }
 
     .blocks {
-        
         @include tablet {
            display: flex; 
            justify-content: space-between;
            align-items: center;
-           
         }
         
     }
-    .title-div {
-        margin-bottom: 40px;
 
+    .title-block {
+        margin-bottom: 40px;
+        @include tablet { 
+            margin-bottom: 0px;
+        }
+    }
+
+    .title-div {
         width: 232px;
         @include tablet {
             width: 340px;
