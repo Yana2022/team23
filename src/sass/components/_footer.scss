@@ -2,18 +2,21 @@
         background-color: #FFF5F6;
     }
 
+    .section.blocks {
+padding-bottom: 40px;
+@include desktop {
+    padding-bottom: 60px;
+}
+    }
+
     .blocks {
-        margin-bottom: 40px;
+        
         @include tablet {
            display: flex; 
            justify-content: space-between;
            align-items: center;
            
         }
-        @include desktop {
-            // margin-bottom: 60px;
-        }
-                
         
     }
     .title-div {
@@ -125,7 +128,7 @@
 
     
     .call {
-        margin-bottom: 40px;
+        
         text-align: right;
         @include tablet {
                 
