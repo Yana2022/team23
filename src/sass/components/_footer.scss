@@ -2,32 +2,82 @@
         background-color: #FFF5F6;
     }
 
+    .section.blocks {
+padding-bottom: 40px;
+@include desktop {
+    padding-bottom: 60px;
+}
+    }
+
+    .blocks {
+        
+        @include tablet {
+           display: flex; 
+           justify-content: space-between;
+           align-items: center;
+           
+        }
+        
+    }
     .title-div {
         margin-bottom: 40px;
 
         width: 232px;
+        @include tablet {
+            width: 340px;
+            margin-bottom: 0px;
+            }
+        @include desktop {
+            min-width: 478px;
+            }
         
     }
     .title-div__text {
         font-family: $title-font-family;
-        font-weight: 400;
-        font-size: 18px;
-        line-height: 21px;
-        text-transform: uppercase;
         
 }
 
     .text--pale {
         color: $accent-pink;
         margin-bottom: 16px;
+        
+            font-size: 18px;
+            line-height: 0.9;
+            text-transform: uppercase;
+        @include tablet {
+            margin-bottom: 12px;
+            
+            font-size: 26px;
+            line-height: 0.9;
+            letter-spacing: 0.04em;
+        }
+        @include desktop {
+            margin-bottom: 16px;
+            font-size: 30px;
+            line-height: 0.9;
+            
+        }
 }
 
     .text--bright {
         color: $main-red-color;
         font-size: 34px;
-        line-height: 39px;
+        line-height: 0.9;
         letter-spacing: 0.04em;
         text-transform: uppercase;
+
+        @include tablet {
+            font-size: 48px;
+            line-height: 0.9;
+            letter-spacing: 0.06em;
+            }
+        
+        @include desktop {
+            font-size: 58px;
+            line-height: 0.9;
+            letter-spacing: 0.06em;
+        
+            }
 }
 
     .social {
@@ -35,6 +85,7 @@
         justify-content: flex-end;
 
         margin-bottom: 40px;
+        
     }
 
     .social__item {
@@ -45,6 +96,19 @@
         &:last-child {
             margin-right: 0px;
         }
+                @include tablet {
+                    width: 34px;
+                    height: 34px;
+                    margin-right: 30px;
+                    &:last-child {
+                            margin-right: 0px;
+                }
+        
+                @include desktop {
+                    width: 34px;
+                    height: 34px;
+                }
+    }
     }
 
     .social__link {
@@ -55,43 +119,67 @@
         height: 100%;
         border-radius: 50%;
         background-color: #FEA5BB;
+
+            &:hover,
+            &:focus {
+                background-color: $main-red-color;
+            }
         }
 
     
     .call {
-        margin-bottom: 40px;
+        
         text-align: right;
+        @include tablet {
+                
+                margin-bottom: 0px;
+            }
     }
 
     .call__phone {
         font-family: $main-font-family;
         font-weight: 700;
         font-size: 12px;
-        line-height: 186%;
-        
+        line-height: 1.9;
+        @include tablet {
+            font-size: 14px;
+            }
+        @include desktop {
+            font-size: 16px;
+            }
     }
 
     .phone--bright {
         color: $main-red-color;
     }
 
-hr {
-    margin: 0;
-    margin-bottom: 16px;
-    // padding-bottom: 16px;
+    hr {
+        margin: 0;
+        margin-bottom: 16px;
+        border-top: 1px solid #FFF5F6;
+        width: 100%;
+            @include desktop {
+                margin-bottom: 7px;
+        }
 
-    border-top: 1px solid #FFF5F6;
-    width: 100%;
-    
 }
 
     .copyright__text {
-        
-
         font-family: $main-font-family;
         font-weight: 700;
         font-size: 14px;
-        line-height: 152%;
+        line-height: 1.5;
         text-align: center;
         color: $main-text-color;
+        margin: 0 auto;
+            @include tablet {
+                line-height: 1.9;
+        }
     }
+
+    br {
+        @include tablet {
+                display: none;
+            }
+    }
+    
