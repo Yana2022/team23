@@ -78,14 +78,18 @@
     }
 
 hr {
+    margin: 0;
+    margin-bottom: 16px;
+    // padding-bottom: 16px;
+
     border-top: 1px solid #FFF5F6;
     width: 100%;
     
 }
 
     .copyright__text {
-        padding: 16px 0px 3px 0px;
         
+
         font-family: $main-font-family;
         font-weight: 700;
         font-size: 14px;
