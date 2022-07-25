@@ -1,9 +1,18 @@
+.header{
+
+    @include tablet{
+        margin-bottom: 10px;
+    }
+
+    @include desktop{
+        margin-bottom: 60px;
+    }
+}
+
 .header__container {
     display: flex;    
     justify-content: space-between;
     align-items: center;
-    
-    background-color: $header-bgc;
 
     @include mobile{
         padding-top: 8px;

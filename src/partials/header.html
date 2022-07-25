@@ -1,70 +1,112 @@
-<header class="header">
-  <div class="container header__container">
-    <a class="header__logo" href="">
-      <svg width="199" height="50" aria-label="открытие бургерного меню">
-        <use href="./images/icons.svg#logo-icecrema"></use>
+<section class="hero">
+  <header class="header">
+    <div class="container header__container">
+      <a class="header__logo" href="">
+        <svg width="199" height="50" aria-label="открытие бургерного меню">
+          <use href="./images/icons.svg#logo-icecrema"></use>
+        </svg>
+      </a>
+      <div class="header__box-btn--tablet">
+        <button class="header__menu-button" type="button" data-open>
+          <svg width="20" height="12" aria-label="открытие бургерного меню">
+            <use href="./images/icons.svg#burger-open"></use>
+          </svg>
+        </button>
+        <button
+          class="header__button--tablet header__button--basic"
+          type="button"
+          data-menu
+        >
+          Buy now
+          <svg class="header__button--arrow" width="6" height="8">
+            <use href="./images/icons.svg#arrow"></use>
+          </svg>
+        </button>
+      </div>
+      <div class="header__box" data-mobile-modal>
+        <button
+          class="header__menu-button header__menu-button--close"
+          type="button"
+          data-close
+        >
+          <svg width="20" height="12" aria-label="закрытие бургерного меню">
+            <use href="./images/icons.svg#burger-close"></use>
+          </svg>
+        </button>
+        <button
+          class="header__button header__button--basic"
+          type="button"
+          data-menu
+        >
+          Buy now
+          <svg class="header__button--arrow" width="6" height="8">
+            <use href="./images/icons.svg#arrow"></use>
+          </svg>
+        </button>
+        <ul class="header__list">
+          <li class="header__item">
+            <a href="#home" class="header__link">Home</a>
+          </li>
+          <li class="header__item">
+            <a href="#about" class="header__link">About us</a>
+          </li>
+          <li class="header__item">
+            <a href="#howmade" class="header__link">How it’s made?</a>
+          </li>
+          <li class="header__item">
+            <a href="#products" class="header__link">Our products</a>
+          </li>
+          <li class="header__item">
+            <a href="#contact" class="header__link">Contact</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+    <button onclick="topFunction()" id="button-up" title="На верх">
+      <svg width="20" height="20">
+        <use href="./images/icons.svg#arrow"></use>
       </svg>
-    </a>
-    <div class="header__box-btn--tablet">
-      <button class="header__menu-button" type="button" data-open>
-        <svg width="20" height="12" aria-label="открытие бургерного меню">
-          <use href="./images/icons.svg#burger-open"></use>
-        </svg>
-      </button>
-      <button
-        class="header__button--tablet header__button--basic"
-        type="button"
-        data-menu
-      >
-        Buy now
-        <svg class="header__button--arrow" width="6" height="8">
-          <use href="./images/icons.svg#arrow"></use>
-        </svg>
-      </button>
+    </button>
+  </header>
+  <div class="container hero__container">
+    <h1 class="hero__title">Ice cream made with <span class="hero__title-part">passion</span></h1>
+    <ul class="hero__link-set">
+      <li class="hero__link-set-item">
+        <a href="#products" class="hero__ancor-link hero__ancor-link--violet ">Products</a>
+      </li>
+      <li class="hero__link-set-item">
+        <a href="#howmade" class="hero__ancor-link hero__ancor-link--white">How it’s made?</a>
+      </li>
+    </ul>
+    <div class="hero__box">
+      <picture>
+        <source srcset="./images/hero-kettle-deck.png 1x, ./images/hero-kettle-deck.png 2x" media="(min-width: 1200px)">
+        <source srcset="./images/hero-kettle-tab.png 1x, ./images/hero-kettle-tab.png 2x" media="(min-width: 768px)">
+        <img srcset="./images/hero-kettle-tab.png 1x, ./images/hero-kettle-tab.png 2x"
+          src="./images/hero-kettle-tab.png" alt="jug with bio and eco milk" class="img hero__jug-photo">
+      </picture>
+      <div class="hero__text-box">
+        <p class="hero__text">Lorem ipsum dolor sit amet, consectetur
+          adipiscing elit, sed do eiusmod tempor incididunt ut labore et
+        </p>
+        <button type="button" class="hero__arrow"></button>
+      </div>
     </div>
-    <div class="header__box" data-mobile-modal>
-      <button
-        class="header__menu-button header__menu-button--close"
-        type="button"
-        data-close
-      >
-        <svg width="20" height="12" aria-label="закрытие бургерного меню">
-          <use href="./images/icons.svg#burger-close"></use>
+    <ul class="hero__amounts">
+      <li class="hero__amounts-item hero__amounts-item--first">
+        <svg class="hero__number-circle-icon">
+          <circle r="50%" cx="50%" cy="50%" class="hero__number-circle"></circle>
         </svg>
-      </button>
-      <button
-        class="header__button header__button--basic"
-        type="button"
-        data-menu
-      >
-        Buy now
-        <svg class="header__button--arrow" width="6" height="8">
-          <use href="./images/icons.svg#arrow"></use>
+        <p class="hero__number">16</p>
+        <p class="hero__number-description">cafes</p>
+      </li>
+      <li class="hero__amounts-item hero__amounts-item--second">
+        <svg class="hero__number-circle-icon">
+          <circle r="50%" cx="50%" cy="50%" class="hero__number-circle"></circle>
         </svg>
-      </button>
-      <ul class="header__list">
-        <li class="header__item">
-          <a href="#home" class="header__link">Home</a>
-        </li>
-        <li class="header__item">
-          <a href="#about" class="header__link">About us</a>
-        </li>
-        <li class="header__item">
-          <a href="#howmade" class="header__link">How it’s made?</a>
-        </li>
-        <li class="header__item">
-          <a href="#products" class="header__link">Our products</a>
-        </li>
-        <li class="header__item">
-          <a href="#contact" class="header__link">Contact</a>
-        </li>
-      </ul>
-    </div>
+        <p class="hero__number">23</p>
+        <p class="hero__number-description">food trucks</p>
+      </li>
+    </ul>
   </div>
-
-  <button onclick="topFunction()" id="button-up" title="На верх">
-    <svg width="20" height="20">
-      <use href="./images/icons.svg#arrow"></use>
-    </svg>
-  </button>
-</header>
+</section>
