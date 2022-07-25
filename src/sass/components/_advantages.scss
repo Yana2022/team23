@@ -1,9 +1,18 @@
 .advantages-section {
     display: flex;
     flex-direction: row;
-
+      .advantages__list {
+        display: flex;
+        flex-direction: column;
+        @include tablet {
+            flex-direction: row;
+        }
+    }
     .section-item {
-        flex: 1;
+        @include desktop {
+            flex: 1;
+        }
+        
     }
         .weight {
             font-family: Titan One, sans-serif;
@@ -11,6 +20,16 @@
             line-height: 41px;
             font-size: 36px;
             color: #D41443;
+
+            @include tablet{
+                font-size: 48px;
+                line-height: 55px;
+            }
+            @include desktop {
+                font-size: 58px;
+                line-height: 66px;
+            }
+
         }
         .weight_1::before {
             content: "";
@@ -44,9 +63,17 @@
             max-width: 230px;
             line-height: 20px;
             margin-bottom: 32px;
+
+            @include tablet {
+            font-size: 14px;
+            line-height: 24px;
+            max-width: 180px;
+                 }
+                        @include desktop {
+                            font-size: 16px;
+                            line-height: 28px;
+                            max-width: 288px;
+                        }
         }
     
-   /*.advantages__list {
-        display: flex;
-        flex-direction: row;
-    }*/
+   
