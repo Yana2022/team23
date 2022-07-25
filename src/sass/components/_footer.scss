@@ -11,7 +11,7 @@
            
         }
         @include desktop {
-            margin-bottom: 60px;
+            // margin-bottom: 60px;
         }
                 
         
@@ -96,12 +96,16 @@
                 @include tablet {
                     width: 34px;
                     height: 34px;
+                    margin-right: 30px;
+                    &:last-child {
+                            margin-right: 0px;
                 }
         
                 @include desktop {
                     width: 34px;
                     height: 34px;
                 }
+    }
     }
 
     .social__link {
@@ -133,7 +137,7 @@
         font-family: $main-font-family;
         font-weight: 700;
         font-size: 12px;
-        line-height: 186%;
+        line-height: 1.9;
         @include tablet {
             font-size: 14px;
             }
@@ -161,12 +165,12 @@
         font-family: $main-font-family;
         font-weight: 700;
         font-size: 14px;
-        line-height: 152%;
+        line-height: 1.5;
         text-align: center;
         color: $main-text-color;
         margin: 0 auto;
             @include tablet {
-                line-height: 186%;
+                line-height: 1.9;
         }
     }
 
