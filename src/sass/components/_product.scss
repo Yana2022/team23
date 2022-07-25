@@ -1,117 +1,205 @@
-.products {
+.products .container {
+  padding-top: 60px;
+  padding-bottom: 60px;
+  justify-content: center;
+  padding-left: 20px;
+  padding-right: 20px;
+  @media screen and (min-width: 320px) {
+    max-width: 480px;
+  }
+  @media screen and (min-width: 768px) {
+    max-width: 768px;
+    padding-left: 32px;
+    padding-right: 32px;
+  }
+  @media screen and (min-width: 1200px) {
+    max-width: 1200px;
+    padding-left: 16px;
+    padding-right: 16px;
+    justify-content: center;
+  }
 }
-.container {
-}
+
+/*-------------*/
+
 .products__text {
-  /*font-weight: 400;
-font-size: 18px;
-line-height: 1.67;
-text-align: center;
-text-transform: uppercase;
-color: #FFA5BA;*/
   font-family: 'Titan One';
   font-style: normal;
   font-weight: 400;
-  font-size: 30px;
-  line-height: 1.13;
+  font-size: 18px;
+  line-height: 1.67;
   text-align: center;
   letter-spacing: 0.04em;
   text-transform: uppercase;
   color: #ffa5ba;
+  @media screen and (min-width: 768px) {
+    font-size: 26px;
+    line-height: 30px;
+  }
+  @media screen and (min-width: 1200px) {
+    font-size: 30px;
+    line-height: 1.13;
+  }
 }
 .products__title {
-  /*font-weight: 400;
-font-size: 34px;
-line-height: 1.15;
-text-align: center;
-letter-spacing: 0.04em;
-text-transform: uppercase;
-color: #D41443;*/
   font-family: 'Titan One';
   font-style: normal;
   font-weight: 400;
-  font-size: 58px;
-  line-height: 1.14;
+  font-size: 34px;
+  line-height: 1.15;
   text-align: center;
-  letter-spacing: 0.06em;
+  letter-spacing: 0.04em;
   text-transform: uppercase;
   color: #d41443;
+  @media screen and (min-width: 768px) {
+    font-size: 48px;
+    line-height: 1.46;
+  }
+  @media screen and (min-width: 1200px) {
+    font-size: 58px;
+    line-height: 1.14;
+    letter-spacing: 0.06em;
+  }
 }
 .products-blok {
-  height: 876px;
-  display: grid;
-  grid: auto-flow 20vh / repeat(3, 30vw);
-  grid-gap: 32px;
-  padding-bottom: 60px;
+  display: flex;
+  flex-wrap: wrap;
+  @media screen and (min-width: 768px) {
+    width: calc((100% - 32px) / 3);
+    gap: 16px;
+    flex-wrap: nowrap;
+  }
+  @media screen and (min-width: 1200px) {
+    width: calc((100% - 64px) / 3);
+    gap: 32px;
+  }
 }
 .ice-cream .coffe .milkshakes {
   display: block;
-  width: 368px;
-  height: 769px;
-  margin-bottom: 60px;
 }
 .products-blok__ice-cream {
-  /*margin-top: 140px;
-width: 280px;
-height: 489px;*/
-  margin-top: 260px;
-  width: 368px;
+  width: 280px;
   height: auto;
+  margin-top: 140px;
   background: #ffb8ca;
   border-radius: 24px;
-  padding: 160px 60px 60px 60px;
+  padding: 160px 40px 40px 40px;
+  @media screen and (min-width: 768px) {
+    width: 224px;
+    margin-top: 138px;
+    padding: 118px 32px 40px 32px;
+  }
+  @media screen and (min-width: 1200px) {
+    margin-top: 260px;
+    width: 368px;
+    padding: 160px 60px 60px 60px;
+  }
 }
 .ice-creame::before {
   content: '';
-  background-image: url(/src/images/products-wafer-deck.png);
   position: absolute;
-  width: 368px;
-  height: 394px;
+  background-image: url(/src/images/products-wafer-mob.png);
+  width: 280px;
+  height: 280px;
+  @media screen and (min-width: 768px) {
+    background-image: url(/src/images/products-wafer-tab.png);
+    width: 224px;
+    height: 224px;
+  }
+  @media screen and (min-width: 1200px) {
+    background-image: url(/src/images/products-wafer-deck.png);
+    width: 368px;
+    height: 394px;
+  }
 }
 
 .products-blok__coffe {
-  margin-top: 260px;
-  width: 368px;
+  width: 280px;
   height: auto;
+  margin-top: 140px;
   background: #f0d1a5;
   border-radius: 24px;
-  padding: 160px 60px 60px 60px;
+  padding: 160px 40px 40px 40px;
+  @media screen and (min-width: 768px) {
+    width: 224px;
+    margin-top: 138px;
+    padding: 118px 32px 40px 32px;
+  }
+  @media screen and (min-width: 1200px) {
+    margin-top: 260px;
+    width: 368px;
+    padding: 160px 60px 60px 60px;
+  }
 }
 .coffe::before {
   content: '';
-  background-image: url(/src/images/products-coffee-deck.png);
   position: absolute;
-  width: 368px;
-  height: 394px;
+  background-image: url(/src/images/products-coffee-mob.png);
+  width: 280px;
+  height: 280px;
+  @media screen and (min-width: 768px) {
+    background-image: url(/src/images/products-coffee-tab.png);
+    width: 224px;
+    height: 224px;
+  }
+  @media screen and (min-width: 1200px) {
+    background-image: url(/src/images/products-coffee-deck.png);
+    width: 368px;
+    height: 394px;
+  }
 }
 .products-blok__milkshakes {
-  margin-top: 260px;
-  width: 368px;
+  width: 280px;
   height: auto;
+  margin-top: 140px;
   background: #c2e297;
   border-radius: 24px;
-  padding: 160px 60px 60px 60px;
+  padding: 160px 40px 40px 40px;
+  @media screen and (min-width: 768px) {
+    width: 224px;
+    margin-top: 138px;
+    padding: 118px 32px 40px 32px;
+  }
+  @media screen and (min-width: 1200px) {
+    margin-top: 260px;
+    width: 368px;
+    padding: 160px 60px 60px 60px;
+  }
 }
 .milkshakes::before {
   content: '';
-  background-image: url(/src/images/products-milkshakes-deck.png);
   position: absolute;
-  width: 368px;
-  height: 394px;
+  background-image: url(/src/images/products-milkshakes-mob.png);
+  width: 280px;
+  height: 280px;
+  @media screen and (min-width: 768px) {
+    background-image: url(/src/images/products-milkshakes-tab.png);
+    width: 224px;
+    height: 224px;
+  }
+  @media screen and (min-width: 1200px) {
+    background-image: url(/src/images/products-milkshakes-deck.png);
+    width: 368px;
+    height: 394px;
+  }
 }
 
 .products-blok__title {
   font-family: 'Titan One';
   font-style: normal;
   font-weight: 400;
-  font-size: 30px;
-  line-height: 1.13;
+  font-size: 20;
+  line-height: 1.15;
   text-align: center;
   letter-spacing: 0.04em;
   text-transform: uppercase;
   color: #ffffff;
   margin-bottom: 32px;
   flex-wrap: wrap;
+  @media screen and (min-width: 1200px) {
+    font-size: 30px;
+    line-height: 1.13;
+  }
   &::after {
     content: '...';
     display: flex;
@@ -125,14 +213,23 @@ height: 489px;*/
   font-family: 'DM Sans';
   font-style: normal;
   font-weight: 700;
-  font-size: 16px;
-  line-height: 1.76;
+  font-size: 14px;
+  line-height: 1.52;
   text-align: center;
   letter-spacing: 0.04em;
   color: #ffffff;
   margin-bottom: 60px;
+  @media screen and (min-width: 768px) {
+    line-height: 1.76;
+  }
+  @media screen and (min-width: 1200px) {
+    font-size: 16px;
+    line-height: 1.76;
+  }
 }
 .products-blok__btn {
+  display: block;
+  margin: 0 auto;
   width: 40px;
   height: 40px;
   border-radius: 50%;
