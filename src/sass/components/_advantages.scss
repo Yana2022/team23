@@ -1,0 +1,146 @@
+.advantages-section {
+  display: flex;
+  flex-direction: row;
+  .advantages__list {
+    display: flex;
+    flex-direction: column;
+    @include tablet {
+      flex-direction: row;
+    }
+  }
+  .section-item_1,
+  .section-item_2 {
+    margin-bottom: 32px;
+    @include desktop {
+      flex: 1;
+      margin-bottom: 0px;
+    }
+    @include tablet {
+      margin-bottom: 0px;
+    }
+  }
+  .weight {
+    font-family: Titan One, sans-serif;
+    margin-bottom: 4px;
+    line-height: 41px;
+    font-size: 36px;
+    color: #d41443;
+
+    @include tablet {
+      font-size: 48px;
+      line-height: 55px;
+      margin-bottom: 13px;
+    }
+    @include desktop {
+      font-size: 58px;
+      line-height: 66px;
+      margin-bottom: 16px;
+    }
+  }
+  .weight_1::before {
+    content: '';
+    display: block;
+    background: url('/src/images/advantage-pic1.png') no-repeat;
+    width: 33px;
+    height: 50px;
+    margin-bottom: 16px;
+  }
+  .weight_2::before {
+    content: '';
+    display: block;
+    background: url('/src/images/advantage-pic2.png') no-repeat;
+    width: 50px;
+    height: 50px;
+    margin-bottom: 16px;
+  }
+  .weight_3::before {
+    content: '';
+    display: block;
+    background: url('/src/images/advantage-pic3.png') no-repeat;
+    width: 44px;
+    height: 50px;
+    margin-bottom: 16px;
+  }
+}
+.description_1 {
+  font-size: 12px;
+  font-weight: 700;
+  font-family: DM Sans, sans-serif;
+  max-width: 230px;
+  line-height: 20px;
+
+  @include tablet {
+    font-size: 14px;
+    line-height: 24px;
+    max-width: 180px;
+  }
+  @include desktop {
+    font-size: 16px;
+    line-height: 28px;
+    max-width: 288px;
+  }
+}
+
+.description_2 {
+  font-size: 12px;
+  font-weight: 700;
+  font-family: DM Sans, sans-serif;
+  max-width: 230px;
+  line-height: 20px;
+
+  @include tablet {
+    font-size: 14px;
+    line-height: 24px;
+    max-width: 162px;
+  }
+
+  @include desktop {
+    font-size: 16px;
+    line-height: 28px;
+    max-width: 317px;
+  }
+}
+
+.description_3 {
+  font-size: 12px;
+  font-weight: 700;
+  font-family: DM Sans, sans-serif;
+  max-width: 230px;
+  line-height: 20px;
+
+  @include tablet {
+    font-size: 14px;
+    line-height: 24px;
+    max-width: 159px;
+  }
+  @include desktop {
+    font-size: 16px;
+    line-height: 28px;
+    max-width: 288px;
+  }
+}
+.section-item_1 {
+  @include tablet {
+    margin-left: 32px;
+  }
+  @include desktop {
+    margin-left: 16px;
+  }
+}
+.section-item_2 {
+  @include tablet {
+    margin-left: 4px;
+  }
+  @include desktop {
+    margin-left: 115px;
+  }
+}
+
+.section-item_3 {
+  @include tablet {
+    margin-left: 22px;
+  }
+  @include desktop {
+    margin-left: 80px;
+  }
+}
