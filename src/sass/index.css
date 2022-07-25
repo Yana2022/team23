@@ -1,0 +1,371 @@
+@import "~node_modules/modern-normalize/modern-normalize.css";
+h1,
+h2,
+h3,
+h4,
+p {
+  margin: 0px;
+}
+
+ul {
+  margin: 0px;
+  padding: 0px;
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+  color: currentColor;
+}
+
+.img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+  width: 100%;
+}
+
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  white-space: nowrap;
+  -webkit-clip-path: inset(100%);
+          clip-path: inset(100%);
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}
+
+.container {
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 20px;
+  padding-right: 20px;
+}
+@media screen and (min-width: 320px) {
+  .container {
+    width: 320px;
+  }
+}
+@media screen and (min-width: 768px) {
+  .container {
+    width: 768px;
+    padding-left: 32px;
+    padding-right: 32px;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .container {
+    width: 1200px;
+    padding-left: 16px;
+    padding-right: 16px;
+  }
+}
+
+.section {
+  padding-top: 60px;
+  padding-bottom: 60px;
+}
+
+.products__text {
+  /*font-weight: 400;
+  font-size: 18px;
+  line-height: 1.67;
+  text-align: center;
+  text-transform: uppercase;
+  color: #FFA5BA;*/
+  font-family: "Titan One";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 30px;
+  line-height: 1.13;
+  text-align: center;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  color: #FFA5BA;
+}
+
+.products__title {
+  /*font-weight: 400;
+  font-size: 34px;
+  line-height: 1.15;
+  text-align: center;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  color: #D41443;*/
+  font-family: "Titan One";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 58px;
+  line-height: 1.14;
+  text-align: center;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: #D41443;
+}
+
+.products-blok {
+  height: 1050px;
+  display: grid;
+  grid: auto-flow 20vh/repeat(3, 30vw);
+  grid-gap: 32px;
+  padding-top: 165px;
+}
+
+.products-blok__ice-cream {
+  /*margin-top: 140px;
+  width: 280px;
+  height: 489px;*/
+  margin-top: 260px;
+  min-width: 368px;
+  height: 535px;
+  background: #FFB8CA;
+  border-radius: 24px;
+  padding: 160px 60px 60px 60px;
+}
+.products-blok__ice-cream::before {
+  content: "";
+  margin: 0 auto;
+}
+
+.products-blok__coffe {
+  margin-top: 260px;
+  width: 368px;
+  height: 535px;
+  background: #F0D1A5;
+  border-radius: 24px;
+  padding: 160px 60px 60px 60px;
+}
+.products-blok__coffe::before {
+  content: "";
+  margin: 0 auto;
+}
+
+.products-blok__milkshakes {
+  margin-top: 260px;
+  width: 368px;
+  height: 535px;
+  background: #C2E297;
+  border-radius: 24px;
+  padding: 160px 60px 60px 60px;
+  /*&::before{
+  background-image: url(../../images/products-wafer-deck.png);
+  margin: 0 auto;
+  }*/
+}
+.products-blok__milkshakes::before {
+  content: "";
+  margin: 0 auto;
+}
+
+.products-blok__title {
+  font-family: "Titan One";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 30px;
+  line-height: 1.13;
+  text-align: center;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  color: #FFFFFF;
+  margin-bottom: 70px;
+}
+.products-blok__title::after {
+  content: "";
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  color: #FFFFFF;
+}
+
+.products-blok__text {
+  font-family: "DM Sans";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 1.76;
+  text-align: center;
+  letter-spacing: 0.04em;
+  color: #FFFFFF;
+  margin-bottom: 60px;
+}
+
+.products-blok__btn {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  border: none;
+  background-color: #FFFFFF;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.section {
+  padding-top: 60px;
+}
+
+.container {
+  margin-left: auto;
+  margin-right: auto;
+  width: 100%;
+  padding-left: 20px;
+  padding-right: 20px;
+}
+
+.link {
+  text-decoration: none;
+}
+
+li {
+  list-style-type: none;
+}
+
+.section__background {
+  background-color: #FFF5F6;
+}
+
+.contact__card {
+  width: 100%;
+  height: 412px;
+  border-radius: 24px;
+  background-color: #FFFFFF;
+  justify-content: center;
+  align-items: center;
+  padding-top: 40px;
+  padding-bottom: 40px;
+  box-shadow: rgba(212, 20, 67, 0.1);
+  margin-bottom: 20px;
+}
+
+.contact__list {
+  margin-top: 0;
+  margin-bottom: 0;
+  padding-left: 32px;
+}
+
+.contact__position__cafe {
+  font-family: "DM Sans", sans-serif;
+  font-style: medium;
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 22px;
+  letter-spacing: 4%;
+  width: 80px;
+  height: 16px;
+  border-radius: 4px;
+  background-color: #F0D1A5;
+  color: #FFFFFF;
+  text-align: center;
+  margin-top: 0;
+  margin-bottom: 20px;
+}
+
+.contact__position__foodtruck {
+  font-family: "DM Sans", sans-serif;
+  font-style: medium;
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 22px;
+  letter-spacing: 4%;
+  width: 130px;
+  height: 16px;
+  border-radius: 4px;
+  background-color: #C2E297;
+  color: #FFFFFF;
+  text-align: center;
+  margin-bottom: 20px;
+  margin-top: 0;
+  margin-bottom: 20px;
+}
+
+.contact__items {
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 18px;
+  color: #000000;
+}
+
+.contact__line {
+  width: 216px;
+  margin-bottom: 24px;
+  border-bottom: 1px solid #E1E1E1;
+}
+
+.contact__info {
+  font-family: "DM Sans", sans-serif;
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 18px;
+  letter-spacing: 4%;
+  color: #907E82;
+  margin-top: 8px;
+  margin-bottom: 0;
+  padding-bottom: 24px;
+}
+
+.contact__items__time {
+  font-family: "DM Sans", sans-serif;
+  font-style: medium;
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 22px;
+  letter-spacing: 4%;
+  color: #FFA5BA;
+  margin-top: 0;
+  margin-bottom: 8px;
+}
+
+.contact__items__last {
+  padding-bottom: 24px;
+}
+
+.contact__link {
+  font-family: "DM Sans", sans-serif;
+  font-style: medium;
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 18px;
+  letter-spacing: 4%;
+  color: #907E82;
+  transition: color 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
+.contact__link:hover, .contact__link:focus {
+  color: #D46443;
+}
+
+.contact__link {
+  display: block;
+}
+
+.contact__btn__together {
+  margin-top: 12px;
+  margin-left: 78px;
+}
+
+.contact__btn {
+  display: block;
+  font-family: "DM Sans", sans-serif;
+  font-style: bold;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 21px;
+  letter-spacing: 4%;
+  color: #FFFFFF;
+  width: 161px;
+  height: 44px;
+  border-radius: 22px;
+  border-color: transparent;
+  background-color: #D41342;
+  transition: color 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  margin-top: 10px;
+}
+.contact__btn:hover, .contact__btn:focus {
+  color: #D41443;
+  background-color: #FFFFFF;
+}/*# sourceMappingURL=index.css.map */
