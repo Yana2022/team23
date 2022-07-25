@@ -1,0 +1,20 @@
+.gallery__section {
+  background-image: linear-gradient(
+    #fff5f6 0px,
+    #fff5f6 149px,
+    #ffffff 149px,
+    #ffffff 550px
+  );
+}
+.container {
+}
+.gallery__container {
+  margin-left: auto;
+  margin-right: auto;
+  @include desktop {
+    margin-left: 94px;
+    margin-right: 94px;
+  }
+}
+.gallery__img {
+}
