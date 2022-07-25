@@ -1,17 +1,17 @@
 .hero{
     background-color: $header-bgc;
-    background-image: url(./images/hero-icecream-mob.png), url(./images/circle-mob.png);
+    background-image: url(../images/hero-icecream-mob.png), url(../images/circle-mob.png);
     @include retina{
-        background-image: url(./images/hero-icecream-mob-2x.png), url(./images/circle-mob-2x.png);
+        background-image: url(../images/hero-icecream-mob-2x.png), url(../images/circle-mob-2x.png);
     }
     background-repeat: no-repeat;
     background-position: calc(100% - 32px) bottom, right 83px;
     background-size: 171px, 284px;
     @include tablet{
-        background-image: url(./images/girl-tab.png), url(./images/hero-icecream-tab.png), url(./images/circle-tab.png);
+        background-image: url(../images/girl-tab.png), url(../images/hero-icecream-tab.png), url(../images/circle-tab.png);
     
         @include retina {
-            background-image: url(./images/girl-tab-2x.png), url(./images/hero-icecream-tab-2x.png), url(./images/circle-tab-2x.png);
+            background-image: url(../images/girl-tab-2x.png), url(../images/hero-icecream-tab-2x.png), url(../images/circle-tab-2x.png);
         }
         background-position: calc(546px + (100% + 190px - 786px)/2) calc(100% - 1px),
         calc(322px + (100% + 143px - 786px)/2) bottom,
@@ -20,10 +20,10 @@
     }
     
     @include desktop{
-        background-image: url(./images/girl-deck.png), url(./images/hero-icecream-deck.png), url(./images/circle-deck.png);
+        background-image: url(../images/girl-deck.png), url(../images/hero-icecream-deck.png), url(../images/circle-deck.png);
     
         @include retina {
-            background-image: url(./images/girl-deck-2x.png), url(./images/hero-icecream-deck-2x.png), url(./images/circle-deck-2x.png);
+            background-image: url(../images/girl-deck-2x.png), url(../images/hero-icecream-deck-2x.png), url(../images/circle-deck-2x.png);
         }
         background-position: calc(880px + (100% + 304px - 1200px)/2) bottom,
         calc(636px + (100% + 236px - 1200px)/2) bottom,
@@ -184,21 +184,21 @@
     height: 18px;
     border: none;
     background-color: transparent;
-    background-image: url(./images/arrow-right-hero-tab.png);
+    background-image: url(../images/arrow-right-hero-tab.png);
     background-size: 18px;
 
     @include retina{
-        background-image: url(./images/arrow-right-hero-tab-2x.png);
+        background-image: url(../images/arrow-right-hero-tab-2x.png);
     }
 
     @include desktop{
         width: 26px;
         height: 26px;
-        background-image: url(./images/arrow-right-hero-deck.png);
+        background-image: url(../images/arrow-right-hero-deck.png);
         background-size: 26px;
         
         @include retina {
-            background-image: url(./images/arrow-right-hero-deck-2x.png);
+            background-image: url(../images/arrow-right-hero-deck-2x.png);
         }
     }
 }
