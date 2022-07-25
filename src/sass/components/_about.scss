@@ -1,0 +1,163 @@
+.about {
+    background: #FFF5F6;
+}
+
+.about__section {
+    text-align: center;
+    height: 364px;
+    width: 220px;
+    margin-left: auto;
+    margin-right: auto;
+
+    @include tablet {
+        width: 334px;
+        margin-left: 32px;
+        margin-right: 0;
+    }
+
+    @include desktop {
+        padding-top: 90px;
+        width: 463px;
+        margin-left: 100px;
+        margin-right: 0;
+    }
+}
+
+.about__label {
+    text-align: center;
+    color: $accent-pink;
+    margin-bottom: 15px;
+    font-family: $title-font-family;
+    @include font(400, 18px, 1.16, 0.04em);
+
+}
+
+.about__title {
+    text-align: center;
+    color: #D41443;
+    font-family: $title-font-family;
+    @include font(400, 34px, 1.15, 0.04em);
+    margin-bottom: 32px;
+}
+
+.about__wrapper-box {
+    font-family: $main-font-family;
+
+    text-align: center;
+
+    @media screen and (max-width:767px) {
+        background-repeat: no-repeat;
+        background-size: 87% auto;
+        background-position: 50% 65%;
+        background-image: url("../images/spilled-milk-mob.png");
+
+        @media (min-device-pixel-ratio: 1.9),
+        (min-resolution:192dpi),
+        (min-resolution: 2dppx) {
+            background-image: url("../images/spilled-milk-mob-2x.png");
+
+        }
+
+    }
+
+    @include tablet {
+        display: flex;
+        justify-content: center;
+    }
+
+    @include desktop {
+        background-size: cover;
+        background-repeat: no-repeat;
+
+
+        background-image: url("../images/spilled-milk-deck.png");
+
+        @media (min-device-pixel-ratio: 1.9),
+        (min-resolution:192dpi),
+        (min-resolution: 2dppx) {
+            background-image: url("../images/spilled-milk-deck-2x.png");
+
+
+        }
+    }
+}
+
+
+.about__wrapper-pic {
+    text-align: center;
+}
+
+.about__top-text {
+    text-align: left;
+    margin-bottom: 40px;
+    @include font(400, 12px, 1.62, 0.04em);
+    color: #000;
+
+    @include tablet {
+        @include font(500, 14px, 1.76, 0.04em);
+    }
+
+    @include desktop {
+        @include font(500, 16px, 1.76, 0.04em);
+        margin-bottom: 32px;
+    }
+
+}
+
+.about__down-text {
+    text-align: left;
+    color: #907E82;
+    @include font(500, 12px, 1.62, 0.04em);
+    margin-bottom: 10px;
+
+    @include tablet {
+        @include font(500, 14px, 1.76, 0.04em);
+    }
+
+    @include desktop {
+        @include font(500, 16px, 1.76, 0.04em);
+    }
+}
+
+.about__line {
+    text-align: left;
+    color: #907E82;
+    @include font(500, 12px, 1.62, 0.04em);
+    margin-bottom: 20px;
+
+    @include tablet {
+        @include font(500, 14px, 1.76, 0.04em);
+        margin-bottom: 40px;
+    }
+
+    @include desktop {
+        @include font(500, 16px, 1.76, 0.04em);
+    }
+}
+
+
+
+.about__btn-modal {
+    border: 0;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    color: #D41443;
+    background-color: #fff;
+    width: 176px;
+    height: 44px;
+    border-radius: 22px;
+    @include font(700, 14px, 1.28, 0.04em);
+    border-color: #fff;
+    cursor: pointer;
+
+    @include tablet {
+        @include font(700, 16px, 1.30, 0.04em);
+    }
+}
+
+.about__icon {
+    margin-left: 15px;
+
+}
