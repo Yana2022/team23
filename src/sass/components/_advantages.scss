@@ -77,68 +77,68 @@
     line-height: 28px;
     max-width: 288px;
   }
- }
+}
 
-  .description_2 {
-    font-size: 12px;
-    font-weight: 700;
-    font-family: DM Sans, sans-serif;
-    max-width: 230px;
-    line-height: 20px;
+.description_2 {
+  font-size: 12px;
+  font-weight: 700;
+  font-family: DM Sans, sans-serif;
+  max-width: 230px;
+  line-height: 20px;
 
-    @include tablet {
-      font-size: 14px;
-      line-height: 24px;
-      max-width: 162px;
-    }
-
-    @include desktop {
-      font-size: 16px;
-      line-height: 28px;
-      max-width: 317px;
-    }
+  @include tablet {
+    font-size: 14px;
+    line-height: 24px;
+    max-width: 162px;
   }
 
-  .description_3 {
-      font-size: 12px;
-      font-weight: 700;
-      font-family: DM Sans, sans-serif;
-      max-width: 230px;
-      line-height: 20px;
+  @include desktop {
+    font-size: 16px;
+    line-height: 28px;
+    max-width: 317px;
+  }
+}
 
-      @include tablet {
-        font-size: 14px;
-        line-height: 24px;
-        max-width: 159px;
-      }
-      @include desktop {
-        font-size: 16px;
-        line-height: 28px;
-        max-width: 288px;
-      }
-    }
-    .section-item_1 {
-      @include tablet {
-        margin-left: 32px;
-      }
-      @include desktop {
-        margin-left: 16px;
-      }
-    }
-    .section-item_2 {
-      @include tablet {
-        margin-left: 4px;
-      }
-      @include desktop {
-        margin-left: 115px;
-      }
-    }
- 
-    .section-item_3 {
-      @include tablet {
-        margin-left: 22px;
-      }
-      @include desktop {
-        margin-left: 80px;
-      }
-    }
+.description_3 {
+  font-size: 12px;
+  font-weight: 700;
+  font-family: DM Sans, sans-serif;
+  max-width: 230px;
+  line-height: 20px;
+
+  @include tablet {
+    font-size: 14px;
+    line-height: 24px;
+    max-width: 159px;
+  }
+  @include desktop {
+    font-size: 16px;
+    line-height: 28px;
+    max-width: 288px;
+  }
+}
+.section-item_1 {
+  @include tablet {
+    margin-left: 32px;
+  }
+  @include desktop {
+    margin-left: 16px;
+  }
+}
+.section-item_2 {
+  @include tablet {
+    margin-left: 4px;
+  }
+  @include desktop {
+    margin-left: 115px;
+  }
+}
+
+.section-item_3 {
+  @include tablet {
+    margin-left: 22px;
+  }
+  @include desktop {
+    margin-left: 80px;
+  }
+}
