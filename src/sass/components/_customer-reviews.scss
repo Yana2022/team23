@@ -50,8 +50,9 @@
 }
 
 .customer_review__img {
-    border-radius: 50%;
+    display: block;
     margin-bottom: 16px;
+    border-radius: 50%;
     @include tablet {
         margin-bottom: 20px;
     }
@@ -59,29 +60,92 @@
         margin-bottom: 32px;
     }
 }
+
+.text-container {
+    padding: 30px 55px 30px 55px;
+}
 .customer-review__text {
+    display: flex;
+    align-items: center;
+    position: relative;
+    z-index: 1;
     color: #000;
     background-color: #fafafa;
     margin-bottom: 36px;
-    padding: 43px 58px 26px 65px;
+    padding: 30px 55px 30px 55px;
     font-family: DM Sans, sans-serif;
     font-size: 12px;
     font-weight: 500;
     line-height: 2.55;
-
+    height: 320px;
+    background: repeating-linear-gradient(#fafafa, #fafafa 41px, #e1e1e1 41px, #e1e1e1 43px);
+    background-position: 100px;
     @include tablet {
-        padding: 37px 55px 44px 50px;
+        height: unset;
+        padding: 40px 55px 40px 50px;
         margin-bottom: 24px;
         font-size: 14px;
         line-height: 2.15;
     }
     @include desktop {
-        padding: 47px 109px 39px 109px;
+        height: 138px;
+        padding: 45px 109px 45px 109px;
         margin-bottom: 36px;
         font-size: 16px;
         line-height: 1.85;
     }
+
+    &::after {
+        content: "...";
+        color: #c7133e;
+        font-size: 35px;
+        display: block;
+        position: absolute;
+        bottom: -56px;
+        left: 131px;
+        @include tablet {
+            bottom: -45px;
+            left: 300px;
+        }
+        @include desktop {
+            bottom: -42px;
+            left: 471px;
+        }
+    }
+    &::before {
+        content: url("/src/images/commas-deck-mob.png");
+        z-index: -1;
+        position: absolute;
+        top: 20px;
+        left: 15px;
+        @include tablet {
+            content: url("/src/images/commas-tab.png");
+            top: 20px;
+            left: 10px;
+        }
+        @include desktop {
+            content: url("/src/images/commas-deck-mob.png");
+            top: 30px;
+            left: 72px;
+        }
+    }
 }
+
 .customer-review__information {
-    margin-bottom: 42px;
+    margin-bottom: 36px;
+    color: #000000;
+    font-family: DM Sans, sans-serif;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 1.85;
+
+    @include tablet {
+        font-size: 16px;
+        line-height: 1.86;
+    }
+    @include desktop {
+        font-size: 20px;
+        line-height: 1.86;
+    }
 }
