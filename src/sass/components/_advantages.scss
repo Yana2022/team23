@@ -9,6 +9,7 @@
     }
   }
   .section-item {
+    margin-bottom: 32px;
     @include desktop {
       flex: 1;
     }
@@ -54,13 +55,12 @@
     margin-bottom: 16px;
   }
 }
-.description {
+.description_1 {
   font-size: 12px;
   font-weight: 700;
   font-family: DM Sans, sans-serif;
   max-width: 230px;
   line-height: 20px;
-  margin-bottom: 32px;
 
   @include tablet {
     font-size: 14px;
@@ -72,4 +72,43 @@
     line-height: 28px;
     max-width: 288px;
   }
-}
+ }
+
+  .description_2 {
+    font-size: 12px;
+    font-weight: 700;
+    font-family: DM Sans, sans-serif;
+    max-width: 230px;
+    line-height: 20px;
+
+    @include tablet {
+      font-size: 14px;
+      line-height: 24px;
+      max-width: 162px;
+    }
+
+    @include desktop {
+      font-size: 16px;
+      line-height: 28px;
+      max-width: 317px;
+    }
+  }
+
+  .description_3 {
+      font-size: 12px;
+      font-weight: 700;
+      font-family: DM Sans, sans-serif;
+      max-width: 230px;
+      line-height: 20px;
+
+      @include tablet {
+        font-size: 14px;
+        line-height: 24px;
+        max-width: 159px;
+      }
+      @include desktop {
+        font-size: 16px;
+        line-height: 28px;
+        max-width: 288px;
+      }
+    }
