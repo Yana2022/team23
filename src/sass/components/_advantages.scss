@@ -21,7 +21,7 @@
   }
   .weight {
     font-family: Titan One, sans-serif;
-    margin-bottom: 16px;
+    margin-bottom: 4px;
     line-height: 41px;
     font-size: 36px;
     color: #d41443;
@@ -29,10 +29,12 @@
     @include tablet {
       font-size: 48px;
       line-height: 55px;
+      margin-bottom: 13px;
     }
     @include desktop {
       font-size: 58px;
       line-height: 66px;
+      margin-bottom: 16px;
     }
   }
   .weight_1::before {
