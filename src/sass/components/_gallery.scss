@@ -6,11 +6,10 @@
     #ffffff 550px
   );
 }
-.container {
-}
+
 .gallery__container {
-  margin-left: auto;
-  margin-right: auto;
+  padding: 0;
+  margin: 0;
   @include desktop {
     margin-left: 94px;
     margin-right: 94px;
