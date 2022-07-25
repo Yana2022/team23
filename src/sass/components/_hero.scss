@@ -1,0 +1,293 @@
+.hero{
+    background-color: $header-bgc;
+    background-image: url(../images/hero-icecream-mob.png), url(../images/circle-mob.png);
+    @include retina{
+        background-image: url(../images/hero-icecream-mob-2x.png), url(../images/circle-mob-2x.png);
+    }
+    background-repeat: no-repeat;
+    background-position: calc(100% - 32px) bottom, right 83px;
+    background-size: 171px, 284px;
+    @include tablet{
+        background-image: url(../images/girl-tab.png), url(../images/hero-icecream-tab.png), url(../images/circle-tab.png);
+    
+        @include retina {
+            background-image: url(../images/girl-tab-2x.png), url(../images/hero-icecream-tab-2x.png), url(../images/circle-tab-2x.png);
+        }
+        background-position: calc(546px + (100% + 190px - 786px)/2) calc(100% - 1px),
+        calc(322px + (100% + 143px - 786px)/2) bottom,
+        calc(248px + (100% + 335px - 786px)/2) 43px;
+        background-size: 190px, 143px, 335px;
+    }
+    
+    @include desktop{
+        background-image: url(../images/girl-deck.png), url(../images/hero-icecream-deck.png), url(../images/circle-deck.png);
+    
+        @include retina {
+            background-image: url(../images/girl-deck-2x.png), url(../images/hero-icecream-deck-2x.png), url(../images/circle-deck-2x.png);
+        }
+        background-position: calc(880px + (100% + 304px - 1200px)/2) bottom,
+        calc(636px + (100% + 236px - 1200px)/2) bottom,
+        calc(517px + (100% + 534px - 1200px)/2) 43px;
+        background-size: 304px, 236px, 534px;
+    }
+}
+
+.hero__container{
+    position: relative;
+    padding-top: 136px;
+    padding-bottom: 158px;
+
+    @include tablet{
+        padding-top: 10px;
+        padding-bottom: 16px;
+    }
+
+    @include desktop{
+        padding-top: 0;
+        padding-bottom: 60px;
+    }
+}
+
+.hero__title{
+    margin-bottom: 20px;
+
+    font-family: $title-font-family;
+    font-size: 26px;
+    line-height: 1.15;
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+    color: #FFFFFF;
+    max-width: 218px;
+
+    @include tablet{
+        max-width: 162px;
+        font-size: 22px;
+        line-height: 1.14;
+    }
+
+    @include desktop{
+        max-width: 277px;
+        font-size: 38px;
+        line-height: 1.16;
+        margin-bottom: 24px;
+    }
+}
+
+.hero__title-part{
+    font-size: 48px;
+    line-height: 96.5%;
+    text-transform: uppercase;
+    color: $main-red-color;
+
+    @include tablet{
+        font-size: 34px;
+        line-height: 90.5%;
+    }
+
+    @include desktop{
+        font-size: 58px;
+    }
+}
+
+.hero__link-set{
+    display: flex;
+}
+
+.hero__link-set-item{
+    margin-right: 8px;
+
+    @include desktop{
+        margin-right: 16px;
+    }
+
+    &:last-child{
+        margin-right: 0;
+    }
+}
+
+.hero__ancor-link{
+    display: flex;
+    align-items: center;
+    padding-left: 16px;
+    padding-right: 16px;
+    height: 24px;
+    border-radius: 20px;
+    font-family: $main-font-family;
+    font-size: 8px;
+    line-height: 1.25;
+
+    @include desktop{
+        height: 40px;
+        padding-right: 22.63px;
+        padding-left: 23.66px;
+        font-size: 14px;
+        line-height: 1.29;
+    }
+}
+
+.hero__ancor-link--violet{
+    color: $button-bgc;
+    background-color: $main-red-color;    
+}
+
+.hero__ancor-link--white{
+    color: $main-red-color;
+    background-color: $button-bgc;
+    transition: background-color 250ms $cubic-bezier;
+    &:hover,
+    &:focus{
+        background-color: $button-hover;
+    }
+}
+
+.hero__box{
+    display: none;
+    @include tablet{
+        display: flex;
+    }
+    @include desktop{
+        display: flex;
+    }
+}
+
+.hero__jug-photo {
+    width: 152px;
+
+    @include desktop {
+        width: 213px;
+    }
+}
+
+.hero__text-box{
+    padding-top: 68px;
+}
+
+.hero__text{
+    margin-bottom: 7px;
+
+    font-family: $main-font-family;
+    font-size: 8px;
+    line-height: 150%;
+    color: $button-bgc;
+    max-width: 114px;
+
+    @include desktop{
+        font-size: 14px;
+        line-height: 140%;
+        max-width: 200px;
+        margin-bottom: 20px;
+    }
+}
+
+.hero__arrow{
+    width: 18px;
+    height: 18px;
+    border: none;
+    background-color: transparent;
+    background-image: url(../images/arrow-right-hero-tab.png);
+    background-size: 18px;
+
+    @include retina{
+        background-image: url(../images/arrow-right-hero-tab-2x.png);
+    }
+
+    @include desktop{
+        width: 26px;
+        height: 26px;
+        background-image: url(../images/arrow-right-hero-deck.png);
+        background-size: 26px;
+        
+        @include retina {
+            background-image: url(../images/arrow-right-hero-deck-2x.png);
+        }
+    }
+}
+
+.hero__amounts{
+    display: none;
+    position: absolute;
+    right: 0;
+    @include tablet{
+        display: block;
+        top: 0px;
+        right: 32px;
+    }
+    @include desktop{
+        display: block;
+        top: 5px;
+        right: 16px;
+    }
+}
+
+.hero__amounts-item{
+    position: relative;
+    margin-bottom: 16px;
+    &:last-child{
+        margin-bottom: 0;
+    }
+}
+
+.hero__amounts-item--first{
+    padding-top: 2px;
+    padding-right: 10px;
+
+    @include desktop{
+        padding-top: 4px;
+        padding-right: 18px;
+    }
+}
+
+.hero__amounts-item--second {
+    padding-top: 1px;
+    padding-right: 8px;
+
+    @include desktop {
+        padding-top: 3px;
+        padding-right: 18px;
+    }
+}
+
+.hero__number{
+    position: relative;
+    font-family: 'Titan One';
+    font-size: 28px;
+    line-height: 1.14;
+    text-align: right;
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+    color: $main-red-color;
+
+    @include desktop{
+        font-size: 46px;
+        line-height: 1.15;
+    }
+}
+
+.hero__number-description{
+    font-family: 'DM Sans';
+    font-size: 8px;
+    line-height: 1.25;
+    text-align: right;
+    color: $button-bgc;
+
+    @include desktop{
+        font-size: 14px;
+        line-height: 1.28;
+    }
+}
+
+.hero__number-circle-icon{
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 16px;
+    height: 16px;
+    @include desktop{
+        width: 30px;
+        height: 30px;
+    }
+}
+
+.hero__number-circle{
+    fill: $button-bgc;
+}
