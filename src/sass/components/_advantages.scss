@@ -12,6 +12,10 @@
     margin-bottom: 32px;
     @include desktop {
       flex: 1;
+      margin-bottom: 0px;
+    }
+    @include tablet {
+      margin-bottom: 0px;
     }
   }
   .weight {
