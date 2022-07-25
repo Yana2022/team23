@@ -50,7 +50,14 @@
 }
 
 .customer_review__img {
+    border-radius: 50%;
     margin-bottom: 16px;
+    @include tablet {
+        margin-bottom: 20px;
+    }
+    @include desktop {
+        margin-bottom: 32px;
+    }
 }
 .customer-review__text {
     color: #000;
@@ -65,10 +72,14 @@
     @include tablet {
         padding: 37px 55px 44px 50px;
         margin-bottom: 24px;
+        font-size: 14px;
+        line-height: 2.15;
     }
     @include desktop {
         padding: 47px 109px 39px 109px;
         margin-bottom: 36px;
+        font-size: 16px;
+        line-height: 1.85;
     }
 }
 .customer-review__information {
