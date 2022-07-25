@@ -28,6 +28,7 @@
     color: $accent-pink;
     margin-bottom: 15px;
     font-family: $title-font-family;
+    text-transform: uppercase;
     @include font(400, 18px, 1.16, 0.04em);
 
 }
@@ -36,6 +37,7 @@
     text-align: center;
     color: #D41443;
     font-family: $title-font-family;
+    text-transform: uppercase;
     @include font(400, 34px, 1.15, 0.04em);
     margin-bottom: 32px;
 }
@@ -159,5 +161,6 @@
 
 .about__icon {
     margin-left: 15px;
-
+    background-color: #000;
+    fill: #D41443;
 }
