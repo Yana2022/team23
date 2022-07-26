@@ -1,23 +1,22 @@
 .about {
     padding-bottom: 0;
-    background: #FFF5F6;
+    background: #FFF5F6;   
+}
 
-    @include desktop {
-        width: 1200px;
-        margin-left: auto;
-        margin-right: auto;
-        background-position: 0 200px;
-        background-size: content;
+@media screen and (min-width: 1200px) {
+    .about {
         background-repeat: no-repeat;
-
+        background-position: 50% 90%;
+        background-size: contain;        
+    
         background-image: url("../images/spilled-milk-deck.png");
 
-        @media (min-device-pixel-ratio: 1.9),
+        @media (min-device-pixel-ratio: 2),
         (min-resolution:192dpi),
         (min-resolution: 2dppx) {
-            background-image: url("../images/spilled-milk-deck-2x.png");
-
-
+            .about {
+                background-image: url("../images/spilled-milk-deck-2x.png");
+            }   
         }
     }
 }
@@ -83,10 +82,13 @@
         background-image: url("../images/spilled-milk-mob.png");
     }
 
-    @media (min-device-pixel-ratio: 1.9),
+    @media (min-device-pixel-ratio: 2),
     (min-resolution:192dpi),
     (min-resolution: 2dppx) {
-        background-image: url("../images/spilled-milk-mob-2x.png");
+        .about__section {
+            background-image: url("../images/spilled-milk-mob-2x.png");
+        }
+        
 
     }
 
