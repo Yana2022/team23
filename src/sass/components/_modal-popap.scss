@@ -1,0 +1,236 @@
+.backdrop {
+  position: fixed;
+  z-index: 101;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  padding: 15px;
+  background-color: rgba(175, 95, 135, 0.747);
+  opacity: 1;
+  transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  overflow-y: scroll;
+}
+
+.is-hidden-popup {
+  opacity: 0;
+  pointer-events: none;
+}
+
+.modal-body {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  padding: 40px;
+  transform: translate(-50%, -50%) scale(1);
+  width: 460px;
+  height: 586px;
+  font-family: $main-font-family;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 1.16;
+  letter-spacing: 0.01em;
+  border-radius: 4px;
+  color: $main-red-color;
+  background-image: linear-gradient(
+      351deg,
+      rgba(235, 176, 48, 1) 0%,
+      rgba(230, 47, 161, 0.3617822128851541) 50%,
+      rgba(238, 137, 145, 0.4234068627450981) 100%
+    ),
+    url(../images/baner-popup.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+
+  .is-hidden & {
+    transform: translate(-50%, -50%) scale(0.5);
+  }
+
+  &__title {
+    font-family: $main-font-family;
+    font-size: 20px;
+    line-height: 1.15;
+    text-align: center;
+    text-transform: uppercase;
+    letter-spacing: 0.03em;
+    margin: 0 0 12px 0;
+    color: $main-red-color;
+  }
+
+  &__thumb {
+    display: flex;
+    flex-direction: column-reverse;
+    position: relative;
+    margin: 0 0 10px 0;
+  }
+
+  &__thumb:nth-child(5) {
+    margin: 0 0 20px 0;
+  }
+
+  &__field {
+    height: 40px;
+    padding: 10px 0 10px 42px;
+    border: 1px solid $accent-pink;
+    border-radius: 4px;
+    transition: outline 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  }
+
+  &__field:focus,
+  &__field:hover {
+    border: none;
+    outline: 1px solid $accent-pink;
+  }
+
+  &__label {
+    padding: 0 0 4px 0;
+  }
+
+  &__icon {
+    position: absolute;
+    bottom: 11px;
+    left: 12px;
+    transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+
+    .modal__field:focus + .modal__label > &,
+    .modal__field:hover + .modal__label > & {
+      fill: $main-text-color;
+    }
+  }
+
+  &__textarea {
+    width: 100%;
+    height: 120px;
+    font-family: $main-font-family;
+    font-size: 12px;
+    line-height: 1.17;
+    letter-spacing: 0.01em;
+    padding: 12px 16px 12px 16px;
+    resize: none;
+    color: $main-text-color;
+    border-color: $accent-pink;
+    border-radius: 4px;
+    transition: border 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  }
+
+  &__textarea:focus,
+  &__textarea:hover {
+    border: 1px solid $accent-pink;
+  }
+
+  &__row {
+    max-width: 200px;
+    margin: 0 auto 0 auto;
+  }
+  @media screen and (min-width: 320px) and (man-width: 767px) {
+    width: 100%;
+    height: 100%;
+  }
+
+  @media screen and (min-width: 1200px) {
+    width: 534px;
+    height: 800px;
+  }
+
+}
+
+.modal__btn {
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  top: 8px;
+  right: 8px;
+  width: 30px;
+  height: 30px;
+  padding: 0;
+  stroke: rgb(102, 93, 93);
+  border-radius: 50%;
+  border: 1px solid rgba(175, 95, 135, 0.747);
+  cursor: pointer;
+  background-color: $accent-yellow;
+  transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+
+  &:focus,
+  &:hover {
+    stroke: $main-red-color;
+    border-color: $accent-pink;
+  }
+
+  .btn__icon {
+    display: inline-block;
+    width: 11px;
+    height: 11px;
+  }
+}
+
+.signing-agreement {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0 0 30px 0;
+
+  &__field {
+    margin: 0 8px 0 0;
+  }
+
+  &__label {
+    display: flex;
+    align-items: center;
+    font-weight: 400;
+    font-family: $main-font-family;
+    font-size: 12px;
+    line-height: 1.71;
+    letter-spacing: 0.02em;
+
+    @media screen and (min-width: 1200px) {
+      font-size: 14px;
+    }
+  }
+
+  &__icon {
+    top: 5px;
+    left: 0;
+    margin: 0 10px 0 0;
+    border: 2px solid #fff;
+    border-radius: 2px;
+    fill: none;
+    transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
+      border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+
+    .signing-agreement__field:checked + .signing-agreement__label > & {
+      background-color: $main-red-color;
+      border-color: $main-red-color;
+      fill: #fff;
+    }
+  }
+
+  &__link {
+    margin: 0 0 0 5px;
+    color: $accent-green;
+  }
+}
+
+.btn-submit {
+  padding: 10px 55px 10px 55px;
+  font-weight: 700;
+  font-family: $main-font-family;
+  font-size: 16px;
+  line-height: 1.88;
+  text-align: center;
+  letter-spacing: 0.06em;
+  cursor: pointer;
+  color: $main-text-color;
+  background-color: $button-bgc;
+  border: blue;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+  border-radius: 4px;
+
+  &:focus,
+  &:hover {
+    background-color: $main-red-color;
+    color: #fff;
+  }
+}
