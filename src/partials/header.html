@@ -37,6 +37,7 @@
           class="header__button header__button--basic"
           type="button"
           data-menu
+          data-open-popup
         >
           Buy now
           <svg class="header__button--arrow" width="6" height="8">
@@ -152,5 +153,86 @@
         <p class="hero__number-description">food trucks</p>
       </li>
     </ul>
+  </div>
+  <div class="backdrop is-hidden-popup" data-modal-popup>
+    <div class="modal-body">
+      <button class="btn modal__btn" type="button" data-close-popup>
+        <svg class="btn__icon">
+          <use href="./images/icons.svg#burger-close"></use>
+        </svg>
+      </button>
+      <form>
+        <h2 class="modal-body__title">we will call you back</h2>
+        <div class="modal-body__thumb">
+          <input
+            class="modal-body__field"
+            id="user-name"
+            type="text"
+            name="user-name"
+          />
+          <label class="modal-body__label" for="user-name"
+            >Name<svg class="modal-body__icon" width="18" height="18">
+              <use href="./images/icons.svg#icon-for-user-name"></use></svg
+          ></label>
+        </div>
+        <div class="modal-body__thumb">
+          <input
+            class="modal-body__field"
+            id="namber-tel"
+            type="tel"
+            name="namber-tel"
+          />
+          <label class="modal-body__label" for="namber-tel"
+            >Phone<svg class="modal-body__icon" width="18" height="18">
+              <use href="./images/icons.svg#icon-phone"></use></svg
+          ></label>
+        </div>
+        <div class="modal-body__thumb">
+          <input
+            class="modal-body__field"
+            id="email-post"
+            type="email"
+            name="email-post"
+          />
+          <label class="modal-body__label" for="email-post"
+            >Email<svg class="modal-body__icon" width="18" height="18">
+              <use href="./images/icons.svg#user-email"></use></svg
+          ></label>
+        </div>
+        <div class="modal-body__thumb">
+          <textarea
+            class="modal-body__textarea"
+            name="user-review"
+            id="user-review"
+            placeholder="Enter text"
+          ></textarea>
+          <label class="modal-body__label" for="user-review">Description</label>
+        </div>
+        <div class="signing-agreement">
+          <input
+            class="signing-agreement__field visually-hidden"
+            type="checkbox"
+            name="agreement"
+            value="agreement"
+            id="agreement"
+          />
+          <label class="signing-agreement__label" for="agreement">
+            <svg class="signing-agreement__icon" width="16" height="15">
+              <use href="./images/icons.svg#icon-check"></use></svg
+            >Call me back outside business hours
+            <a class="signing-agreement__link" href="./index.html"
+              >Terms of an agreement</a
+            >
+          </label>
+        </div>
+        <div class="modal__row">
+          <button class="btn-submit" type="submit">
+            Submit<svg class="header__button--arrow" width="6" height="8">
+              <use href="./images/icons.svg#arrow"></use>
+            </svg>
+          </button>
+        </div>
+      </form>
+    </div>
   </div>
 </section>
