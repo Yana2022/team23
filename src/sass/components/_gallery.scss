@@ -170,6 +170,10 @@
 }
 
 @include desktop {
+    .gallery__section {
+        padding-top: 60;
+        padding-bottom: 60;
+        }
     .gallery__thumb {
         display: grid;
         grid-template-columns: repeat(6, 2fr);
