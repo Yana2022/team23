@@ -1,7 +1,7 @@
 .section-background {
     background-image: linear-gradient(to bottom,
-            #f5f5f5 302px,
-            #FFF5F6 1060px);
+            #ffffff 23%,
+            #FFF5F6 23%);
 
 
     @include tablet {
@@ -19,10 +19,14 @@
 }
 
 .contact__list{
-    @include tablet{
+    @media screen and (min-width: 768px) and (max-width: 1199.98px){
+        display: flex;        
+        gap: 32px;
+    }
+
+    @include desktop{
         display: flex;
         gap: 32px;
-        justify-content: center;        
     }
 }
 
@@ -54,11 +58,14 @@
     }
 
     @media screen and (min-width: 768px) and (max-width: 1199.98px) {
-        
+        flex-basis: calc((100% - 32px*2)/3);        
         width: 224px;
         height: 528px;
         padding-left: 33px;
         padding-right: 33px;
+        display: flex;
+        justify-content: center;
+        
     }
     
     @include desktop {
