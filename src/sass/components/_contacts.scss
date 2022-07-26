@@ -8,7 +8,7 @@
 
     @media (min-width: 768px) and (max-width: 1199.98px) {
         background-image: linear-gradient(to bottom,
-                #f5f5f5 45%,
+                #ffffff 45%,
                 #FFF5F6 45%
                 )
     }
@@ -16,7 +16,7 @@
 
     @include desktop {
         background-image: linear-gradient(to bottom,
-                #f5f5f5 20%,
+                #ffffff 20%,
                 #FFF5F6 20%)
     }
 }

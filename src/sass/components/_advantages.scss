@@ -10,8 +10,20 @@
   .advantages__list {
     display: flex;
     flex-direction: column;
+    margin-left: auto;
+    margin-right: auto;
+    
+    @include mobile {
+      max-width: 320px;
+    }
+  
     @include tablet {
+      max-width: 768px;
       flex-direction: row;
+    }
+  
+    @include desktop {
+      max-width: 1200px;
     }
   }
   .section-item_1,
