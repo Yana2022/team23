@@ -1,13 +1,94 @@
 .about {
+    padding-bottom: 0;
     background: #FFF5F6;
+
+    @include desktop {
+        width: 1200px;
+        margin-left: auto;
+        margin-right: auto;
+        background-position: 0 200px;
+        background-size: content;
+        background-repeat: no-repeat;
+
+        background-image: url("../images/spilled-milk-deck.png");
+
+        @media (min-device-pixel-ratio: 1.9),
+        (min-resolution:192dpi),
+        (min-resolution: 2dppx) {
+            background-image: url("../images/spilled-milk-deck-2x.png");
+
+
+        }
+    }
+}
+
+.about__label {
+    text-align: center;
+    color: $accent-pink;
+    margin-bottom: 16px;
+    font-family: $title-font-family;
+    text-transform: uppercase;
+    @include font(400, 18px, 1.16, 0.04em);
+
+}
+
+.about__title {
+    text-align: center;
+    color: #D41443;
+    font-family: $title-font-family;
+    text-transform: uppercase;
+    @include font(400, 34px, 1.15, 0.04em);
+    margin-bottom: 32px;
+
+    @media screen and (max-width:767px) {
+        width: 200px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    @include tablet {
+        margin-bottom: 40px;
+    }
+    
+    @include desktop {
+        margin-bottom: 60px;
+    }
+}
+
+.about__wrapper-box {
+    font-family: $main-font-family;    
+
+    @include tablet {
+        display: flex;
+        justify-content: center;
+    }    
+}
+
+.about__wrapper-pic {
+    text-align: center;
 }
 
 .about__section {
     text-align: center;
-    height: 364px;
     width: 220px;
     margin-left: auto;
     margin-right: auto;
+
+    // for milk
+    @media screen and (max-width:767px) {
+        width: 280px;
+        background-position: 0 71px;
+        background-size: content;
+        background-repeat: no-repeat;
+        background-image: url("../images/spilled-milk-mob.png");
+    }
+
+    @media (min-device-pixel-ratio: 1.9),
+    (min-resolution:192dpi),
+    (min-resolution: 2dppx) {
+        background-image: url("../images/spilled-milk-mob-2x.png");
+
+    }
 
     @include tablet {
         width: 334px;
@@ -23,117 +104,56 @@
     }
 }
 
-.about__label {
-    text-align: center;
-    color: $accent-pink;
-    margin-bottom: 15px;
-    font-family: $title-font-family;
-    text-transform: uppercase;
-    @include font(400, 18px, 1.16, 0.04em);
 
-}
-
-.about__title {
-    text-align: center;
-    color: #D41443;
-    font-family: $title-font-family;
-    text-transform: uppercase;
-    @include font(400, 34px, 1.15, 0.04em);
-    margin-bottom: 32px;
-}
-
-.about__wrapper-box {
-    font-family: $main-font-family;
-
-    text-align: center;
-
-    @media screen and (max-width:767px) {
-        background-repeat: no-repeat;
-        background-size: 87% auto;
-        background-position: 50% 65%;
-        background-image: url("../images/spilled-milk-mob.png");
-
-        @media (min-device-pixel-ratio: 1.9),
-        (min-resolution:192dpi),
-        (min-resolution: 2dppx) {
-            background-image: url("../images/spilled-milk-mob-2x.png");
-
-        }
-
-    }
-
-    @include tablet {
-        display: flex;
-        justify-content: center;
-    }
-
-    @include desktop {
-        background-size: cover;
-        background-repeat: no-repeat;
-
-
-        background-image: url("../images/spilled-milk-deck.png");
-
-        @media (min-device-pixel-ratio: 1.9),
-        (min-resolution:192dpi),
-        (min-resolution: 2dppx) {
-            background-image: url("../images/spilled-milk-deck-2x.png");
-
-
-        }
-    }
-}
-
-
-.about__wrapper-pic {
-    text-align: center;
-}
-
-.about__top-text {
+.about__top-text,
+.about__down-text,
+.about__line {
+    width: 220px;
     text-align: left;
-    margin-bottom: 40px;
-    @include font(400, 12px, 1.62, 0.04em);
-    color: #000;
+    
+    @include font(500, 12px, 1.62, 0.02em);
+    
 
     @include tablet {
-        @include font(500, 14px, 1.76, 0.04em);
+        width: 334px;
+        @include font(500, 14px, 1.76, 0.02em);
     }
 
     @include desktop {
-        @include font(500, 16px, 1.76, 0.04em);
+        width: 463px;
+        @include font(500, 16px, 1.76, 0.02em);
         margin-bottom: 32px;
     }
 
 }
 
+.about__top-text {    
+    margin-bottom: 40px;
+    
+    color: #000;
+}
+
 .about__down-text {
-    text-align: left;
     color: #907E82;
-    @include font(500, 12px, 1.62, 0.04em);
+    
     margin-bottom: 10px;
 
-    @include tablet {
-        @include font(500, 14px, 1.76, 0.04em);
-    }
-
-    @include desktop {
-        @include font(500, 16px, 1.76, 0.04em);
+    @include desktop {        
+        margin-bottom: 0px;
     }
 }
 
-.about__line {
-    text-align: left;
+.about__line {    
     color: #907E82;
-    @include font(500, 12px, 1.62, 0.04em);
+    
     margin-bottom: 20px;
 
-    @include tablet {
-        @include font(500, 14px, 1.76, 0.04em);
+    @include tablet {        
         margin-bottom: 40px;
     }
 
-    @include desktop {
-        @include font(500, 16px, 1.76, 0.04em);
+    @include desktop {        
+        margin-bottom: 0px;
     }
 }
 
@@ -157,10 +177,16 @@
     @include tablet {
         @include font(700, 16px, 1.30, 0.04em);
     }
+
+    transition: background-color 250ms $cubic-bezier;
+
+    &:hover,
+    &:focus {
+        background-color: $button-hover;
+    }
 }
 
 .about__icon {
-    margin-left: 15px;
-    background-color: #000;
-    fill: #D41443;
+    margin-left: 15px;    
+    stroke: #D41443;
 }
