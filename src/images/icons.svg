@@ -3,7 +3,7 @@
     xmlns:xlink="http://www.w3.org/1999/xlink">
     <defs>
         <symbol id="burger-close" viewBox="0 0 32 32">
-            <path fill="none" stroke="#D41443" stroke-linejoin="miter" stroke-linecap="butt" stroke-miterlimit="4" stroke-width="2" d="M2.52 2l26.96 28M2 29.48l28-26.96"></path>
+            <path fill="none" stroke-linejoin="miter" stroke-linecap="butt" stroke-miterlimit="4" stroke-width="2" d="M2.52 2l26.96 28M2 29.48l28-26.96"></path>
         </symbol>
         <symbol id="burger-open" viewBox="0 0 46 32">
             <path fill="none" stroke="#D41443" stroke-linejoin="miter" stroke-linecap="butt" stroke-miterlimit="4" stroke-width="2.2857" d="M0 2.286h45.714M0 16h45.714M0 29.714h45.714"></path>
@@ -25,6 +25,9 @@
         </symbol>
         <symbol id="telegram" viewBox="0 0 40 32">
             <path fill="#ffffff" stroke="none" d="M16.206 20.75l-0.636 8.34c0.908 0 1.302-0.366 1.774-0.802l4.26-3.8 8.83 6.034c1.62 0.84 2.76 0.398 3.196-1.39l5.796-25.346h0.002c0.514-2.236-0.866-3.108-2.444-2.56l-34.064 12.172c-2.324 0.84-2.29 2.052-0.396 2.6l8.71 2.528 20.226-11.814c0.952-0.588 1.82-0.264 1.106 0.326l-16.362 13.712z"></path>
+        </symbol>
+        <symbol id="icon-check" viewBox="0 0 34 32">
+            <path stroke-linejoin="miter" stroke-linecap="butt" stroke-miterlimit="4" stroke-width="0.4267" d="M8.442 16.538l-0.147-0.141-0.147 0.139-2.057 1.95 0.162 0.156 7.605 7.253 0.147-0.141 16.171-15.426-0.162-0.154-2.029-1.935-0.147 0.141-13.98 13.325-5.417-5.167z"></path>
         </symbol>
     </defs>
 </svg>
