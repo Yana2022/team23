@@ -71,47 +71,32 @@
     z-index: 1;
     color: #000;
     background-color: #fafafa;
-    margin-bottom: 36px;
-    padding: 30px 55px 30px 55px;
+    // margin-bottom: 36px;
+    // padding: 30px 55px 30px 55px;
+
+    padding: 14px 35px;
     font-family: DM Sans, sans-serif;
     font-size: 12px;
     font-weight: 500;
     line-height: 2.55;
-    height: 320px;
+    // height: 320px;
     background: repeating-linear-gradient(#fafafa, #fafafa 41px, #e1e1e1 41px, #e1e1e1 43px);
     background-position: 100px;
     @include tablet {
-        height: unset;
-        padding: 40px 55px 40px 50px;
-        margin-bottom: 24px;
+        // height: unset;
+        // padding: 40px 55px 40px 50px;
+        // margin-bottom: 24px;
         font-size: 14px;
         line-height: 2.15;
     }
     @include desktop {
-        height: 138px;
-        padding: 45px 109px 45px 109px;
-        margin-bottom: 36px;
+        // height: 138px;
+        // padding: 45px 109px 45px 109px;
+        // margin-bottom: 36px;
         font-size: 16px;
         line-height: 1.85;
     }
 
-    &::after {
-        content: "...";
-        color: #c7133e;
-        font-size: 35px;
-        display: block;
-        position: absolute;
-        bottom: -56px;
-        left: 131px;
-        @include tablet {
-            bottom: -45px;
-            left: 300px;
-        }
-        @include desktop {
-            bottom: -42px;
-            left: 471px;
-        }
-    }
     &::before {
         content: url("/src/images/commas-deck-mob.png");
         z-index: -1;
@@ -131,6 +116,29 @@
     }
 }
 
+.bg_customer {
+    height: 138px;
+    padding: 32px 72px;
+    background-color: #fafafa;
+
+    &::after {
+        content: "...";
+        color: #c7133e;
+        font-size: 35px;
+        display: block;
+        position: absolute;
+        bottom: -56px;
+        left: 131px;
+        @include tablet {
+            bottom: -45px;
+            left: 300px;
+        }
+        @include desktop {
+            bottom: 74px;
+            left: 471px;
+        }
+    }
+}
 .customer-review__information {
     margin-bottom: 36px;
     color: #000000;
