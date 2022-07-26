@@ -1,23 +1,5 @@
 .about {
     padding-bottom: 0;
-    background: #FFF5F6;
-
-    @include desktop {
-        width: 1200px;
-        margin-left: auto;
-        margin-right: auto;
-        background-position: 0 200px;
-        background-size: content;
-        background-repeat: no-repeat;
-
-        background-image: url("../images/spilled-milk-deck.png");
-
-        @media (min-device-pixel-ratio: 1.9),
-        (min-resolution:192dpi),
-        (min-resolution: 2dppx) {
-            background-image: url("../images/spilled-milk-deck-2x.png");
-
-        }
 
     background: #FFF5F6;   
 }
@@ -38,7 +20,6 @@
             }   
         }
     }
-}
 }
 
 .about__label {
