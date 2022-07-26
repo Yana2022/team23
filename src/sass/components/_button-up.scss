@@ -1,5 +1,5 @@
-#button-up{
-    display: none;
+.button-up{
+    opacity: 0;
     justify-content: center;
     align-items: center;
     position: fixed;        
@@ -15,6 +15,7 @@
     transform: rotate(-90deg);
     
     @include animation(background-color);
+    @include animation(opacity);
 
     &:hover, &:focus{
         background-color: $menu-link-border;
@@ -24,4 +25,8 @@
 
 .button-up__icon{
     stroke: $main-red-color;
+}
+
+.button-up.no-transparency{
+    opacity: 1;
 }
