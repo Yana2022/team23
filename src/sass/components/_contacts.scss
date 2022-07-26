@@ -1,20 +1,23 @@
-.section-background {
-    background-image: linear-gradient(to bottom,
-            #ffffff 23%,
-            #FFF5F6 23%);
-
-
-    @include tablet {
+.contact__background {
+    @include mobile{
         background-image: linear-gradient(to bottom,
-                #f5f5f5 298px,
-                #FFF5F6 290px)
+                    #ffffff 23%,
+                    #FFF5F6 23%);
+    }
+
+
+    @media (min-width: 768px) and (max-width: 1199.98px) {
+        background-image: linear-gradient(to bottom,
+                #f5f5f5 45%,
+                #FFF5F6 45%
+                )
     }
 
 
     @include desktop {
         background-image: linear-gradient(to bottom,
-                #f5f5f5 99px,
-                #FFF5F6 499px)
+                #f5f5f5 20%,
+                #FFF5F6 20%)
     }
 }
 
