@@ -1,5 +1,6 @@
 .about {
     padding-bottom: 0;
+
     background: #FFF5F6;   
 }
 
@@ -82,6 +83,7 @@
         background-image: url("../images/spilled-milk-mob.png");
     }
 
+
     @media (min-device-pixel-ratio: 2),
     (min-resolution:192dpi),
     (min-resolution: 2dppx) {
@@ -89,6 +91,7 @@
             background-image: url("../images/spilled-milk-mob-2x.png");
         }
         
+
 
     }
 

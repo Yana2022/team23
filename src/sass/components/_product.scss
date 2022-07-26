@@ -21,6 +21,13 @@
   }
 }
 
+.products-blok {
+  @media screen and (max-width: 767px) {
+    display: flex;
+    justify-content: center;
+  }  
+}
+
 /*-------------*/
 
 .products__text {
