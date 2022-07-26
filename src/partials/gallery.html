@@ -1,26 +1,137 @@
-<!-- <section class="section gallery__section">
+<section class="section gallery__section">
   <div class="container gallery__container">
     <h2 class="gelery__title visually-hidden">Gallery foto icecream</h2>
 
-    <picture>
-      <source
-        srcset="./images/gallery-deck.png 1x, ./images/gallery-deck.png 2x"
-        media="(min-width: 1200px)"
-      />
-      <source
-        srcset="./images/gallery-tab.png 1x, ./images/gallery-tab.png 2x"
-        media="(min-width: 768px)"
-      />
-      <source
-        srcset="./images/gallery-mob.png, ./images/gallery-mob.png 2x"
-        media="(min-width: 320px)"
-      />
-      <img
-        src="./images/gallery-deck.png"
-        alt="Gallery foto icecream"
-        width="1013"
-        class="gallery__img"
-      />
-    </picture>
+    <ul class="gallery__thumb">
+      <li class="gallery__item gallery__first-img">
+        <picture>
+          <source srcset="./images/gallery-pic1-mob.jpg 320w, ./images/gallery-pic1-mob-2x.jpg 640w"
+            media="(max-width: 767px)" sizes="(min-width: 320px) 320px, 100vw">
+          <source srcset="./images/gallery-pic1-tab.jpg 768w, ./images/gallery-pic1-tab-2x.jpg 1536w"
+            media="(max-width: 1199px)" sizes="(min-width: 768px) 768px, 100vw">
+          <source srcset="./images/gallery-pic1-deck.jpg 1200w, ./images/gallery-pic1-deck-2x.jpg 2400w"
+            media="(min-width: 1200px)" sizes="(min-width: 1200px) 1200px, 100vw">
+          <img srcset="./images/gallery-pic1-mob.jpg x1, ./images/gallery-pic1-mob-2x.jpg x2"
+            src="./images/gallery-pic1-mob.jpg" alt="gallery picture">
+        </picture>
+      </li>
+
+      <li class="gallery__item">
+        <picture>
+          <source srcset="./images/gallery-pic2-mob.jpg 320w, ./images/gallery-pic2-mob-2x.jpg 640w"
+            media="(max-width: 767px)" sizes="(min-width: 320px) 320px, 100vw">
+          <source srcset="./images/gallery-pic2-tab.jpg 768w, ./images/gallery-pic2-tab-2x.jpg 1536w"
+            media="(max-width: 1199px)" sizes="(min-width: 768px) 768px, 100vw">
+          <source srcset="./images/gallery-pic2-deck.jpg 1200w, ./images/gallery-pic2-deck-2x.jpg 2400w"
+            media="(min-width: 1200px)" sizes="(min-width: 1200px) 1200px, 100vw">
+          <img srcset="./images/gallery-pic2-mob.jpg x1, ./images/gallery-pic2-mob-2x.jpg x2"
+            src="./images/gallery-pic2-mob.jpg" alt="gallery picture">
+        </picture>
+      </li>
+
+      <li class="gallery__item">
+        <picture>
+          <source srcset="./images/gallery-pic3-mob.jpg 320w, ./images/gallery-pic3-mob-2x.jpg 640w"
+            media="(max-width: 767px)" sizes="(min-width: 320px) 320px, 100vw">
+          <source srcset="./images/gallery-pic3-tab.jpg 768w, ./images/gallery-pic3-tab-2x.jpg 1536w"
+            media="(max-width: 1199px)" sizes="(min-width: 768px) 768px, 100vw">
+          <source srcset="./images/gallery-pic3-deck.jpg 1200w, ./images/gallery-pic3-deck-2x.jpg 2400w"
+            media="(min-width: 1200px)" sizes="(min-width: 1200px) 1200px, 100vw">
+          <img srcset="./images/gallery-pic3-mob.jpg x1, ./images/gallery-pic3-mob-2x.jpg x2"
+            src="./images/gallery-pic3-mob.jpg" alt="gallery picture">
+        </picture>
+      </li>
+
+      <li class="gallery__item">
+        <picture>
+          <source srcset="./images/gallery-pic4-mob.jpg 320w, ./images/gallery-pic4-mob-2x.jpg 640w"
+            media="(max-width: 767px)" sizes="(min-width: 320px) 320px, 100vw">
+          <source srcset="./images/gallery-pic4-tab.jpg 768w, ./images/gallery-pic4-tab-2x.jpg 1536w"
+            media="(max-width: 1199px)" sizes="(min-width: 768px) 768px, 100vw">
+          <source srcset="./images/gallery-pic4-deck.jpg 1200w, ./images/gallery-pic4-deck-2x.jpg 2400w"
+            media="(min-width: 1200px)" sizes="(min-width: 1200px) 1200px, 100vw">
+          <img srcset="./images/gallery-pic4-mob.jpg x1, ./images/gallery-pic4-mob-2x.jpg x2"
+            src="./images/gallery-pic4-mob.jpg" alt="gallery picture">
+        </picture>
+      </li>
+
+      <li class="gallery__item">
+        <picture>
+          <source srcset="./images/gallery-pic5-mob.jpg 320w, ./images/gallery-pic5-mob-2x.jpg 640w"
+            media="(max-width: 767px)" sizes="(min-width: 320px) 320px, 100vw">
+          <source srcset="./images/gallery-pic5-tab.jpg 768w, ./images/gallery-pic5-tab-2x.jpg 1536w"
+            media="(max-width: 1199px)" sizes="(min-width: 768px) 768px, 100vw">
+          <source srcset="./images/gallery-pic5-deck.jpg 1200w, ./images/gallery-pic5-deck-2x.jpg 2400w"
+            media="(min-width: 1200px)" sizes="(min-width: 1200px) 1200px, 100vw">
+          <img srcset="./images/gallery-pic5-mob.jpg x1, ./images/gallery-pic5-mob-2x.jpg x2"
+            src="./images/gallery-pic5-mob.jpg" alt="gallery picture">
+        </picture>
+      </li>
+
+      <li class="gallery__item">
+        <picture>
+          <source srcset="./images/gallery-pic6-mob.jpg 320w, ./images/gallery-pic6-mob-2x.jpg 640w"
+            media="(max-width: 767px)" sizes="(min-width: 320px) 320px, 100vw">
+          <source srcset="./images/gallery-pic6-tab.jpg 768w, ./images/gallery-pic6-tab-2x.jpg 1536w"
+            media="(max-width: 1199px)" sizes="(min-width: 768px) 768px, 100vw">
+          <source srcset="./images/gallery-pic6-deck.jpg 1200w, ./images/gallery-pic6-deck-2x.jpg 2400w"
+            media="(min-width: 1200px)" sizes="(min-width: 1200px) 1200px, 100vw">
+          <img srcset="./images/gallery-pic6-mob.jpg x1, ./images/gallery-pic6-mob-2x.jpg x2"
+            src="./images/gallery-pic6-mob.jpg" alt="gallery picture">
+        </picture>
+      </li>
+
+      <li class="gallery__item">
+        <picture>
+          <source srcset="./images/gallery-pic7-mob.jpg 320w, ./images/gallery-pic7-mob-2x.jpg 640w"
+            media="(max-width: 767px)" sizes="(min-width: 320px) 320px, 100vw">
+          <source srcset="./images/gallery-pic7-tab.jpg 768w, ./images/gallery-pic7-tab-2x.jpg 1536w"
+            media="(max-width: 1199px)" sizes="(min-width: 768px) 768px, 100vw">
+          <source srcset="./images/gallery-pic7-deck.jpg 1200w, ./images/gallery-pic7-deck-2x.jpg 2400w"
+            media="(min-width: 1200px)" sizes="(min-width: 1200px) 1200px, 100vw">
+          <img srcset="./images/gallery-pic7-mob.jpg x1, ./images/gallery-pic7-mob-2x.jpg x2"
+            src="./images/gallery-pic7-mob.jpg" alt="gallery picture">
+        </picture>
+      </li>
+
+      <li class="gallery__item">
+        <picture>
+          <source srcset="./images/gallery-pic8-mob.jpg 320w, ./images/gallery-pic8-mob-2x.jpg 640w"
+            media="(max-width: 767px)" sizes="(min-width: 320px) 320px, 100vw">
+          <source srcset="./images/gallery-pic8-tab.jpg 768w, ./images/gallery-pic8-tab-2x.jpg 1536w"
+            media="(max-width: 1199px)" sizes="(min-width: 768px) 768px, 100vw">
+          <source srcset="./images/gallery-pic8-deck.jpg 1200w, ./images/gallery-pic8-deck-2x.jpg 2400w"
+            media="(min-width: 1200px)" sizes="(min-width: 1200px) 1200px, 100vw">
+          <img srcset="./images/gallery-pic8-mob.jpg x1, ./images/gallery-pic8-mob-2x.jpg x2"
+            src="./images/gallery-pic8-mob.jpg" alt="gallery picture">
+        </picture>
+      </li>
+
+      <li class="gallery__item">
+        <picture>
+          <source srcset="./images/gallery-pic9-mob.jpg 320w, ./images/gallery-pic9-mob-2x.jpg 640w"
+            media="(max-width: 767px)" sizes="(min-width: 320px) 320px, 100vw">
+          <source srcset="./images/gallery-pic9-tab.jpg 768w, ./images/gallery-pic9-tab-2x.jpg 1536w"
+            media="(max-width: 1199px)" sizes="(min-width: 768px) 768px, 100vw">
+          <source srcset="./images/gallery-pic9-deck.jpg 1200w, ./images/gallery-pic9-deck-2x.jpg 2400w"
+            media="(min-width: 1200px)" sizes="(min-width: 1200px) 1200px, 100vw">
+          <img srcset="./images/gallery-pic9-mob.jpg x1, ./images/gallery-pic9-mob-2x.jpg x2"
+            src="./images/gallery-pic9-mob.jpg" alt="gallery picture">
+        </picture>
+      </li>
+
+      <li class="gallery__item">
+        <picture>
+          <source srcset="./images/gallery-pic10-mob.jpg 320w, ./images/gallery-pic10-mob-2x.jpg 640w"
+            media="(max-width: 767px)" sizes="(min-width: 320px) 320px, 100vw">
+          <source srcset="./images/gallery-pic10-tab.jpg 768w, ./images/gallery-pic10-tab-2x.jpg 1536w"
+            media="(max-width: 1199px)" sizes="(min-width: 768px) 768px, 100vw">
+          <source srcset="./images/gallery-pic10-deck.jpg 1200w, ./images/gallery-pic10-deck-2x.jpg 2400w"
+            media="(min-width: 1200px)" sizes="(min-width: 1200px) 1200px, 100vw">
+          <img srcset="./images/gallery-pic10-mob.jpg x1, ./images/gallery-pic10-mob-2x.jpg x2"
+            src="./images/gallery-pic10-mob.jpg" alt="gallery picture">
+        </picture>
+      </li>
+    </ul>
   </div>
-</section> -->
+</section>
