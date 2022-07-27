@@ -74,7 +74,7 @@
     padding: 118px 32px 40px 32px;
     margin-left: 0;
     margin-right: 16px;
-    .products-blok__item:last-child {
+    &:last-child {
       margin-right: 0;
     }
 
@@ -84,7 +84,7 @@
     width: 368px;
     padding: 160px 60px 60px 60px;
     margin-right: 32px;    
-    .products-blok__item:last-child {
+    &:last-child {
       margin-right: 0;
     }
   }
