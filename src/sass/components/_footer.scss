@@ -125,6 +125,8 @@
         border-radius: 50%;
         background-color: #FEA5BB;
 
+        transition: background-color 250ms $cubic-bezier;
+
             &:hover,
             &:focus {
                 background-color: $main-red-color;
