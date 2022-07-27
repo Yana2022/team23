@@ -7,7 +7,7 @@
   height: 100%;
   background-color: rgba(175, 95, 135, 0.747);
   opacity: 1;
-  transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: opacity 800ms cubic-bezier(0.4, 0, 0.2, 1);
   overflow-y: scroll;
 }
 
@@ -20,14 +20,14 @@
   position: absolute;
   top: 50%;
   left: 50%;
-  padding: 40px;
-  transform: translate(-50%, -50%) scale(1);
+  padding: 35px;
+  transform: translate(-50%, -50%);
   width: 100%;
   height: auto;
   font-family: $main-font-family;
   font-weight: 700;
   font-size: 16px;
-  line-height: 1.16;
+  line-height: 1.15;
   letter-spacing: 0.01em;
   color: $main-red-color;
   background-image: linear-gradient(
@@ -39,10 +39,13 @@
     url(../images/baner-popup.jpg);
   background-repeat: no-repeat;
   background-size: cover;
-  transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transform: translate(-50%, -50%) perspective(600px) translate(0px, 0%)
+    rotateX(0deg);
+  transition: all 800ms cubic-bezier(0.4, 0, 0.2, 1);
 
-  .is-hidden & {
-    transform: translate(-50%, -50%) scale(0.5);
+  .is-hidden-popup & {
+    transform: translate(-50%, -50%) perspective(600px) translate(0px, -100%)
+      rotateX(45deg);
   }
 
   &__title {
@@ -77,16 +80,15 @@
   &__field {
     height: 40px;
     padding: 10px 0 10px 42px;
-    border: 2px solid $accent-pink;
+    border: 1px solid #fff;
     opacity: 85%;
     border-radius: 15px;
-    transition: outline 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
   }
 
   &__field:focus,
   &__field:hover {
-    border: none;
-    outline: 1px solid $main-red-color;
+    border: 1px solid $main-red-color;
   }
 
   &__label {
@@ -115,7 +117,7 @@
     padding: 12px 16px 12px 16px;
     resize: none;
     color: $main-text-color;
-    border-color: $accent-pink;
+    border: 1px solid #fff;
     opacity: 85%;
     border-radius: 15px;
     transition: border 250ms cubic-bezier(0.4, 0, 0.2, 1);
@@ -123,8 +125,7 @@
 
   &__textarea:focus,
   &__textarea:hover {
-    border: none;
-    outline: 1px solid $main-red-color;
+    border: 1px solid $main-red-color;
   }
 
   &__row {
@@ -135,7 +136,6 @@
   @media screen and (min-width: 480px) {
     width: 450px;
     border-radius: 15px;
-
   }
 
   @media screen and (min-width: 768px) {
@@ -154,6 +154,7 @@
     justify-content: center;
     align-items: center;
     margin-bottom: 10px;
+    transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
   }
 }
 
@@ -172,7 +173,8 @@
   border: 1px solid rgba(175, 95, 135, 0.747);
   cursor: pointer;
   background-color: $accent-yellow;
-  transition: stroke 250ms cubic-bezier(0.4, 0, 0.2, 1), border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: stroke 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 
   &:focus,
   &:hover {
@@ -207,6 +209,7 @@
     line-height: 1.71;
     letter-spacing: 0.02em;
     color: #fff;
+    cursor: pointer;
 
     @media screen and (min-width: 480px) {
       font-size: 11px;
