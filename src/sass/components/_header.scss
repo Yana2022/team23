@@ -1,3 +1,21 @@
+@keyframes visibly {
+    0%{
+        opacity: 0;
+    }
+    100%{
+        opacity: 1;
+    }
+}
+
+@keyframes grow-link{
+    0%{
+        font-size: 14px;
+    }
+    100%{
+        font-size: 16px;
+    }
+}
+
 .header{
 
     @include tablet{
@@ -30,6 +48,11 @@
     }
 }
 
+.header__logo{
+    animation: visibly 1s $cubic-bezier;
+}
+
+
 // кнопки на Планшет (купить и бургер меню)
 .header__box-btn--tablet{
     display: flex;
@@ -44,6 +67,8 @@
     background-color: transparent;
     border: none;
 
+    animation: visibly 1s $cubic-bezier;
+
     @include desktop{
         display: none;
     }
@@ -56,6 +81,8 @@
     position: absolute;
     top: 20px;
     right: 20px;
+
+    animation: visibly 1s $cubic-bezier;
 }
 
 // выпадающее меню
@@ -106,6 +133,8 @@
         font-family: $main-font-family;
         cursor: pointer;
 
+        transition: background-color 250ms $cubic-bezier;
+
         &:hover,
         &:focus {
                 background-color: $button-hover;
@@ -114,6 +143,8 @@
 
 // кнопка купить 
 .header__button {    
+
+    animation: visibly 1s $cubic-bezier;
 
     @include mobile {
         display: block;
@@ -140,7 +171,9 @@
     display: none;
     margin-left: 32px;
     padding-left: 37px;
-    padding-right: 37px;    
+    padding-right: 37px;   
+
+    animation: visibly 1s $cubic-bezier;
 
     @media (min-width: 768px) and (max-width:1199px){
         display: block;
@@ -165,6 +198,8 @@
 // стилизация ссылок для выпадающего меню
 .header__item {
 
+    animation: visibly 1s $cubic-bezier;
+
     @media screen and (max-width:1199px) {
         padding-top: 12px;
         padding-bottom: 12px;
@@ -185,9 +220,13 @@
     font-family: $main-font-family;
     color: $button-bgc;
 
+    
+    transition: color 250ms $cubic-bezier;
+
     &:hover,
     &:focus {
         color: $main-red-color;
+        animation: grow-link 250ms $cubic-bezier forwards;
     }
 
 
