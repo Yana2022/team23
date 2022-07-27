@@ -5,11 +5,13 @@
                 #FFF5F6 23%);
     }
 
+
     @media (min-width: 768px) and (max-width: 1199.98px) {
         background-image: linear-gradient(to bottom,
                 #ffffff 45%,
                 #FFF5F6 45%)
     }
+
 
     @include desktop {
         background-image: linear-gradient(to bottom,
@@ -40,6 +42,7 @@
     background-color: $button-bgc;
     box-shadow: 0px 8px 30px rgba(212, 20, 67, 0.1);
     font-family: $main-font-family;
+
 
     @media (min-width:320px) and (max-width: 767px) {
         display: block;
@@ -122,6 +125,7 @@
     color: $main-text-color;
     margin-top: 8px;
 
+
     @media (min-width:768px) and (max-width:1199px) {
         @include font(500, 14px, 1.6, 0.04em);
         padding-bottom: 32px;
@@ -192,6 +196,7 @@
 }
 
 
+
 .contact__btn-list {
     display: flex;
     flex-direction: column;
@@ -218,6 +223,7 @@
         margin-bottom: 10px;
     }
 }
+
 
 .contact__btn {
     display: block;
@@ -282,23 +288,35 @@
 .is-hidden-loc {
     opacity: 0;
     visibility: hidden;
-    pointer-events: none;}
+    pointer-events: none;
+   
+}
+.backdrop1 {
+    position: fixed;
+    z-index: 999;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(175, 95, 135, 0.747);
+    opacity: 1;
+    transition: opacity 800ms cubic-bezier(0.4, 0, 0.2, 1);
+    overflow: hidden;
+  }
 
 .locations-modal {
     position: absolute;
-    width: 100%;
+    width: 320;
     min-height: 600px;
+    
 
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    
-    background-color: white;
-    border-radius: 5px;
-    background-color:transparent;
-    
-  
 
+    background-color:transparent;
+   
+    border-radius: 5px;
     @media (min-width:768px) and (max-width:1199px) {
         width: 768px;
        
@@ -310,11 +328,11 @@
     }}
    
     .modal-map{
-    width: 100%;
+    width: 320px;
     height: 600px;
     padding: 25px;
     border-radius: 5px;
-      border:transparent;
+    border: none;
      
 
     @media (min-width:768px) and (max-width:1199px) {
@@ -326,7 +344,5 @@
         width: 800px;
 
     }
-
 }
-
 
