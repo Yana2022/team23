@@ -355,7 +355,8 @@ a {
 .hero {
   background-color: #FFB8CA;
   position: relative;
-  overflow: hidden;
+  overflow-x: hidden;
+  overflow-y: visible;
 }
 
 .hero__main-circle-icon {
@@ -806,7 +807,7 @@ a {
     margin-left: 0;
     margin-right: 16px;
   }
-  .products-blok__item .products-blok__item:last-child {
+  .products-blok__item:last-child {
     margin-right: 0;
   }
 }
@@ -816,7 +817,7 @@ a {
     padding: 160px 60px 60px 60px;
     margin-right: 32px;
   }
-  .products-blok__item .products-blok__item:last-child {
+  .products-blok__item:last-child {
     margin-right: 0;
   }
 }

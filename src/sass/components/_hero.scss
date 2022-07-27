@@ -15,7 +15,8 @@
 .hero{
     background-color: $header-bgc;
     position: relative;
-    overflow: hidden;
+    overflow-y: visible;
+    overflow-x: hidden;
 }
 
 .hero__main-circle-icon{
