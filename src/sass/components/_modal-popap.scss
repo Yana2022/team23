@@ -22,7 +22,7 @@
   left: 50%;
   padding: 35px;
   transform: translate(-50%, -50%);
-  width: 100%;
+  width: calc(100% - 30px);
   height: auto;
   font-family: $main-font-family;
   font-weight: 700;
