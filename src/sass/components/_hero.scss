@@ -1,40 +1,70 @@
 .hero{
     background-color: $header-bgc;
-    background-image: url(../images/hero-icecream-mob.png), url(../images/circle-hero-mob.png);
-    @include retina{
-        background-image: url(../images/hero-icecream-mob-2x.png), url(../images/circle-hero-mob-2x.png);
-    }
-    background-repeat: no-repeat;
-    background-position: 117px bottom, 36px 83px;
-    background-size: 171px, 346px;
+    position: relative;
+    overflow: hidden;
+}
 
-    @media screen and (min-width: 480px){
-        background-position: calc(117px + (100% + 171px - 480px)/2) bottom,
-        calc(36px + (100% + 346px - 480px)/2) 83px;
+.hero__main-circle-icon{
+    position: absolute;
+    top: 83px;
+    left: 36px;
+    width: 346px;
+    height: 344px;
+
+    @media screen and (min-width:480px) {
+        left: calc(36px + (100% - 480px)/2);
     }
 
     @include tablet{
-        background-image: url(../images/girl-tab.png), url(../images/hero-icecream-tab.png), url(../images/circle-tab.png);
-    
-        @include retina {
-            background-image: url(../images/girl-tab-2x.png), url(../images/hero-icecream-tab-2x.png), url(../images/circle-tab-2x.png);
-        }
-        background-position: calc(546px + (100% + 190px - 786px)/2) calc(100% - 1px),
-        calc(322px + (100% + 143px - 786px)/2) bottom,
-        calc(248px + (100% + 335px - 786px)/2) 43px;
-        background-size: 190px, 143px, 335px;
+        top: 43px;
+        left: calc(248px + (100% - 768px)/2);
+        width: 335px;
+        height: 333px;
     }
-    
-    @include desktop{
-        background-image: url(../images/girl-deck.png), url(../images/hero-icecream-deck.png), url(../images/circle-deck.png);
-    
-        @include retina {
-            background-image: url(../images/girl-deck-2x.png), url(../images/hero-icecream-deck-2x.png), url(../images/circle-deck-2x.png);
-        }
-        background-position: calc(880px + (100% + 304px - 1200px)/2) bottom,
-        calc(636px + (100% + 236px - 1200px)/2) bottom,
-        calc(517px + (100% + 534px - 1200px)/2) 43px;
-        background-size: 304px, 236px, 534px;
+
+     @include desktop{
+        top: 54px;
+        left: calc(517px + (100% - 1200px)/2);
+        width: 534px;
+        height: 534px;
+    }
+}
+
+.hero__main-circle{
+    fill: $accent-pink;
+}
+
+.hero__icecream-photo{
+    position: absolute;
+    bottom: 0;
+    left: 117px;
+    width: 171px;
+
+    @media screen and (min-width:480px) {
+        left: calc(117px + (100% - 480px)/2);
+    }
+
+    @include tablet{
+        left: calc(322px + (100% - 768px)/2);
+        width: 143px;
+    }
+
+     @include desktop{
+        left: calc(636px + (100% - 1200px)/2);
+        width: 236px;
+    }
+}
+
+.hero__girl-photo {
+    position: absolute;
+    bottom: 1px;
+    right: calc(32px + (100% - 768px)/2);
+    width: 190px;
+
+    @include desktop {
+        bottom: 0;
+        right: calc(16px + (100% - 1200px)/2);
+        width: 304px;
     }
 }
 

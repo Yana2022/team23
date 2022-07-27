@@ -330,43 +330,78 @@ a {
 
 .hero {
   background-color: #FFB8CA;
-  background-image: url(../images/hero-icecream-mob.png), url(../images/circle-hero-mob.png);
-  background-repeat: no-repeat;
-  background-position: 117px bottom, 36px 83px;
-  background-size: 171px, 346px;
+  position: relative;
+  overflow: hidden;
 }
-@media (min-device-pixel-ratio: 2), (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi), (min-resolution: 2dppx) {
-  .hero {
-    background-image: url(../images/hero-icecream-mob-2x.png), url(../images/circle-hero-mob-2x.png);
-  }
+
+.hero__main-circle-icon {
+  position: absolute;
+  top: 83px;
+  left: 36px;
+  width: 346px;
+  height: 344px;
 }
 @media screen and (min-width: 480px) {
-  .hero {
-    background-position: calc(117px + (100% + 171px - 480px) / 2) bottom, calc(36px + (100% + 346px - 480px) / 2) 83px;
+  .hero__main-circle-icon {
+    left: calc(36px + (100% - 480px) / 2);
   }
 }
 @media screen and (min-width: 768px) {
-  .hero {
-    background-image: url(../images/girl-tab.png), url(../images/hero-icecream-tab.png), url(../images/circle-tab.png);
-    background-position: calc(546px + (100% + 190px - 786px) / 2) calc(100% - 1px), calc(322px + (100% + 143px - 786px) / 2) bottom, calc(248px + (100% + 335px - 786px) / 2) 43px;
-    background-size: 190px, 143px, 335px;
-  }
-}
-@media screen and (min-width: 768px) and (min-device-pixel-ratio: 2), screen and (min-width: 768px) and (-webkit-min-device-pixel-ratio: 2), screen and (min-width: 768px) and (min-resolution: 192dpi), screen and (min-width: 768px) and (min-resolution: 2dppx) {
-  .hero {
-    background-image: url(../images/girl-tab-2x.png), url(../images/hero-icecream-tab-2x.png), url(../images/circle-tab-2x.png);
+  .hero__main-circle-icon {
+    top: 43px;
+    left: calc(248px + (100% - 768px) / 2);
+    width: 335px;
+    height: 333px;
   }
 }
 @media screen and (min-width: 1200px) {
-  .hero {
-    background-image: url(../images/girl-deck.png), url(../images/hero-icecream-deck.png), url(../images/circle-deck.png);
-    background-position: calc(880px + (100% + 304px - 1200px) / 2) bottom, calc(636px + (100% + 236px - 1200px) / 2) bottom, calc(517px + (100% + 534px - 1200px) / 2) 43px;
-    background-size: 304px, 236px, 534px;
+  .hero__main-circle-icon {
+    top: 54px;
+    left: calc(517px + (100% - 1200px) / 2);
+    width: 534px;
+    height: 534px;
   }
 }
-@media screen and (min-width: 1200px) and (min-device-pixel-ratio: 2), screen and (min-width: 1200px) and (-webkit-min-device-pixel-ratio: 2), screen and (min-width: 1200px) and (min-resolution: 192dpi), screen and (min-width: 1200px) and (min-resolution: 2dppx) {
-  .hero {
-    background-image: url(../images/girl-deck-2x.png), url(../images/hero-icecream-deck-2x.png), url(../images/circle-deck-2x.png);
+
+.hero__main-circle {
+  fill: #FFA5BA;
+}
+
+.hero__icecream-photo {
+  position: absolute;
+  bottom: 0;
+  left: 117px;
+  width: 171px;
+}
+@media screen and (min-width: 480px) {
+  .hero__icecream-photo {
+    left: calc(117px + (100% - 480px) / 2);
+  }
+}
+@media screen and (min-width: 768px) {
+  .hero__icecream-photo {
+    left: calc(322px + (100% - 768px) / 2);
+    width: 143px;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .hero__icecream-photo {
+    left: calc(636px + (100% - 1200px) / 2);
+    width: 236px;
+  }
+}
+
+.hero__girl-photo {
+  position: absolute;
+  bottom: 1px;
+  right: calc(32px + (100% - 768px) / 2);
+  width: 190px;
+}
+@media screen and (min-width: 1200px) {
+  .hero__girl-photo {
+    bottom: 0;
+    right: calc(16px + (100% - 1200px) / 2);
+    width: 304px;
   }
 }
 
@@ -1168,11 +1203,9 @@ a {
 }
 
 .advantages-section {
-  display: flex;
-  flex-direction: row;
   background-color: #FFF5F6;
 }
-@media screen and (min-width: 320px) and (max-width: 767px) {
+@media screen and (min-width: 480px) and (max-width: 767px) {
   .advantages-section {
     padding-top: 40px;
   }
@@ -1185,18 +1218,18 @@ a {
 }
 @media screen and (min-width: 320px) {
   .advantages-section .advantages__list {
-    max-width: 320px;
+    width: 320px;
   }
 }
 @media screen and (min-width: 768px) {
   .advantages-section .advantages__list {
-    max-width: 768px;
+    width: 768px;
     flex-direction: row;
   }
 }
 @media screen and (min-width: 1200px) {
   .advantages-section .advantages__list {
-    max-width: 1200px;
+    width: 1200px;
   }
 }
 .advantages-section .section-item_1,
@@ -1218,7 +1251,7 @@ a {
 }
 .advantages-section .weight {
   font-family: Titan One, sans-serif;
-  margin-bottom: 4px;
+  margin-bottom: 20px;
   line-height: 41px;
   font-size: 36px;
   color: #d41443;
@@ -1793,28 +1826,23 @@ a {
   box-shadow: 0px 8px 30px rgba(212, 20, 67, 0.1);
   font-family: "DM Sans", sans-serif;
 }
-@media screen and (min-width: 320px) {
+@media (min-width: 320px) and (max-width: 767px) {
   .contact__item {
     display: block;
     margin-left: auto;
     margin-right: auto;
     width: 280px;
-    height: 412px;
     padding-left: 32px;
     padding-right: 32px;
   }
   .contact__item:not(:last-child) {
     margin-bottom: 20px;
   }
-  .contact__item:last-child {
-    margin-bottom: 32px;
-  }
 }
 @media screen and (min-width: 768px) and (max-width: 1199.98px) {
   .contact__item {
     flex-basis: calc((100% - 64px) / 3);
     width: 224px;
-    height: 528px;
     padding-left: 33px;
     padding-right: 33px;
     display: flex;
@@ -1824,7 +1852,6 @@ a {
 @media screen and (min-width: 1200px) {
   .contact__item {
     flex-basis: calc((100% - 64px) / 3);
-    height: 538px;
     padding-left: 40px;
     padding-right: 40px;
   }
@@ -1885,7 +1912,6 @@ a {
 }
 
 .contact__text {
-  padding-bottom: 24px;
   font-family: "DM Sans", sans-serif;
   font-weight: 500;
   font-size: 12px;
@@ -1915,6 +1941,7 @@ a {
 }
 
 .contact__box {
+  padding-bottom: 24px;
   margin-bottom: 24px;
   border-bottom: 1px solid #E1E1E1;
 }
@@ -1954,17 +1981,6 @@ a {
   }
 }
 
-@media screen and (min-width: 320px) {
-  .contact__item-time:last-child {
-    padding-bottom: 24px;
-  }
-}
-@media screen and (min-width: 768px) {
-  .contact__item-time:last-child {
-    padding-bottom: 32px;
-  }
-}
-
 .contact__link {
   font-family: "DM Sans", sans-serif;
   font-weight: 500;
@@ -1999,7 +2015,7 @@ a {
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  margin-top: 12px;
+  margin-top: 32px;
 }
 @media screen and (min-width: 768px) {
   .contact__btn-list {
@@ -2007,7 +2023,7 @@ a {
     align-items: center;
     justify-content: center;
     gap: 15px;
-    margin-top: 61px;
+    margin-top: 60px;
   }
 }
 @media screen and (min-width: 1200px) {
@@ -2017,11 +2033,16 @@ a {
   }
 }
 
+@media (max-width: 767px) {
+  .btn-item:first-child {
+    margin-bottom: 10px;
+  }
+}
+
 .contact__btn {
   display: block;
   width: 161px;
   height: 44px;
-  margin-top: 10px;
   font-family: "DM Sans", sans-serif;
   font-style: bold;
   font-weight: 700;
@@ -2288,6 +2309,8 @@ hr {
   position: fixed;
   bottom: 20px;
   right: 20px;
+  width: 40px;
+  height: 40px;
   z-index: 999;
   border: none;
   background-color: #ECEBEB;
@@ -2303,12 +2326,6 @@ hr {
 }
 .button-up:hover, .button-up:focus {
   background-color: #E18298;
-}
-@media screen and (min-width: 320px) {
-  .button-up {
-    width: 40px;
-    height: 40px;
-  }
 }
 @media screen and (min-width: 768px) {
   .button-up {

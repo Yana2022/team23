@@ -1,4 +1,65 @@
 <section class="hero" id="home">
+  <svg class="hero__main-circle-icon">
+    <ellipse rx="50%" ry="50%" cx="50%" cy="50%" class="hero__main-circle"></ellipse>
+  </svg>
+  <picture>
+    <source
+      srcset="
+        ./images/hero-icecream-deck.png 1x,
+        ./images/hero-icecream-deck-2x.png 2x
+      "
+      media="(min-width: 1200px)"
+    />
+    <source
+      srcset="
+        ./images/hero-icecream-tab.png 1x,
+        ./images/hero-icecream-tab-2x.png 2x
+      "
+      media="(min-width: 768px)"
+    />
+    <source
+      srcset="
+        ./images/hero-icecream-mob.png 1x,
+        ./images/hero-icecream-mob-2x.png 2x
+      "
+      media="(min-width: 320px)"
+    />
+    <img
+      srcset="
+        ./images/hero-icecream-mob.png 1x,
+        ./images/hero-icecream-mob-2x.png 2x
+      "
+      src="./images/hero-icecream-mob.png"
+      alt="huge ice cream"
+      class="img hero__icecream-photo"
+    />
+  </picture>
+  <picture>
+    <source
+      srcset="
+        ./images/girl-deck.png 1x,
+        ./images/girl-deck-2x.png 2x
+      "
+      media="(min-width: 1200px)"
+    />
+    <source
+      srcset="
+        ./images/girl-tab.png 1x,
+        ./images/girl-tab-2x.png 2x
+      "
+      media="(min-width: 768px)"
+    />
+    <img
+      srcset="
+        ./images/girl-tab.png 1x,
+        ./images/girl-tab-2x.png 2x
+      "
+      src="./images/girl-tab.png"
+      alt="girl with ice cream"
+      class="img hero__girl-photo"
+    />
+  </picture>
+
   <header class="header">
     <div class="container header__container">
       <a class="header__logo" href="">
@@ -103,21 +164,21 @@
         <source
           srcset="
             ./images/hero-kettle-deck.png 1x,
-            ./images/hero-kettle-deck.png 2x
+            ./images/hero-kettle-deck-2x.png 2x
           "
           media="(min-width: 1200px)"
         />
         <source
           srcset="
             ./images/hero-kettle-tab.png 1x,
-            ./images/hero-kettle-tab.png 2x
+            ./images/hero-kettle-tab-2x.png 2x
           "
           media="(min-width: 768px)"
         />
         <img
           srcset="
             ./images/hero-kettle-tab.png 1x,
-            ./images/hero-kettle-tab.png 2x
+            ./images/hero-kettle-tab-2x.png 2x
           "
           src="./images/hero-kettle-tab.png"
           alt="jug with bio and eco milk"
