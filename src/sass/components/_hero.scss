@@ -1,12 +1,18 @@
 .hero{
     background-color: $header-bgc;
-    background-image: url(../images/hero-icecream-mob.png), url(../images/circle-mob.png);
+    background-image: url(../images/hero-icecream-mob.png), url(../images/circle-hero-mob.png);
     @include retina{
-        background-image: url(../images/hero-icecream-mob-2x.png), url(../images/circle-mob-2x.png);
+        background-image: url(../images/hero-icecream-mob-2x.png), url(../images/circle-hero-mob-2x.png);
     }
     background-repeat: no-repeat;
-    background-position: calc(100% - 32px) bottom, right 83px;
-    background-size: 171px, 284px;
+    background-position: 117px bottom, 36px 83px;
+    background-size: 171px, 346px;
+
+    @media screen and (min-width: 480px){
+        background-position: calc(117px + (100% + 171px - 480px)/2) bottom,
+        calc(36px + (100% + 346px - 480px)/2) 83px;
+    }
+
     @include tablet{
         background-image: url(../images/girl-tab.png), url(../images/hero-icecream-tab.png), url(../images/circle-tab.png);
     
