@@ -51,13 +51,13 @@
 
 .customer_review__img {
     display: block;
-    margin-bottom: 16px;
+    margin-bottom: 32px;
     border-radius: 50%;
     @include tablet {
         margin-bottom: 20px;
     }
     @include desktop {
-        margin-bottom: 32px;
+        margin-bottom: 16px;
     }
 }
 
