@@ -41,12 +41,21 @@
     font-size: 12px;
     color: #000;
     opacity: 1;
-    background: rgba(16, 211, 65, 0.589);
+    // background: rgba(16, 211, 65, 0.589);
+
+    color: transparent;
+    background-image: url("/src/images/ellipse.svg");
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-color: transparent;
 }
 
 .swiper-pagination-bullet-active {
-    color: #fff;
-    background: #007aff;
+    color: transparent;
+    background-image: url("/src/images/house-svg.svg");
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-color: transparent;
 }
 
 .customer_review__img {
