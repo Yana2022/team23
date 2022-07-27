@@ -1,3 +1,13 @@
+@keyframes appearance {
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
 .hero{
     background-color: $header-bgc;
     position: relative;
@@ -6,6 +16,7 @@
 
 .hero__main-circle-icon{
     position: absolute;
+    animation: appearance 2s $cubic-bezier;
     top: 83px;
     left: 36px;
     width: 346px;
@@ -36,6 +47,7 @@
 
 .hero__icecream-photo{
     position: absolute;
+    animation: appearance 2s $cubic-bezier;
     bottom: 0;
     left: 117px;
     width: 171px;
@@ -57,6 +69,7 @@
 
 .hero__girl-photo {
     position: absolute;
+    animation: appearance 2s $cubic-bezier;
     bottom: 1px;
     right: calc(32px + (100% - 768px)/2);
     width: 190px;
@@ -188,6 +201,7 @@
 
 .hero__jug-photo {
     width: 152px;
+    animation: appearance 2s $cubic-bezier;
 
     @include desktop {
         width: 213px;
