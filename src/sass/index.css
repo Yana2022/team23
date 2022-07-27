@@ -281,7 +281,6 @@ a {
   .header__list {
     display: flex;
     gap: 35px;
-    position: relative;
   }
 }
 
@@ -334,6 +333,9 @@ a {
   0% {
     opacity: 0;
   }
+  50% {
+    opacity: 0;
+  }
   100% {
     opacity: 1;
   }
@@ -341,6 +343,9 @@ a {
 
 @keyframes appearance {
   0% {
+    opacity: 0;
+  }
+  50% {
     opacity: 0;
   }
   100% {
@@ -415,6 +420,7 @@ a {
 }
 
 .hero__girl-photo {
+  display: none;
   position: absolute;
   -webkit-animation: appearance 2s cubic-bezier(0.4, 0, 0.2, 1);
           animation: appearance 2s cubic-bezier(0.4, 0, 0.2, 1);
@@ -422,9 +428,15 @@ a {
   right: calc(32px + (100% - 768px) / 2);
   width: 190px;
 }
+@media screen and (min-width: 768px) {
+  .hero__girl-photo {
+    display: block;
+  }
+}
 @media screen and (min-width: 1200px) {
   .hero__girl-photo {
     bottom: 0;
+    display: block;
     right: calc(16px + (100% - 1200px) / 2);
     width: 304px;
   }
