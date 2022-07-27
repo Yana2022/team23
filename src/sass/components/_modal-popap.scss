@@ -134,11 +134,13 @@
 
   @media screen and (min-width: 480px) {
     width: 450px;
+    border-radius: 15px;
 
   }
 
   @media screen and (min-width: 768px) {
     width: 534px;
+    border-radius: 15px;
   }
 
   &__text {
