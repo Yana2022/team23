@@ -8,7 +8,7 @@
         }
     
     .container.footer {
-        @media screen and (min-width: 320px) {
+        @include mobile {
                 width: 320px;
             }
         @media screen and (min-width: 480px) {
