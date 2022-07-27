@@ -45,7 +45,7 @@
     font-family: $main-font-family;
     
 
-    @include mobile{
+    @media (min-width:320px) and (max-width: 767px){
         display: block;
         margin-left: auto;
         margin-right: auto;
