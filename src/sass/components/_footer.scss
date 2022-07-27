@@ -1,21 +1,22 @@
     .footer {
         background-color: #FFF5F6;
+        padding-top: 20px;
+        padding-bottom: 3px;
+        @include desktop {
+        padding-top: 60px;
+        }
     }
-
-    .section.blocks {
-padding-bottom: 40px;
-@include desktop {
-    padding-bottom: 60px;
-}
-    }
-
+    
     .blocks {
+        padding-bottom: 40px;
         @include tablet {
            display: flex; 
            justify-content: space-between;
            align-items: center;
         }
-        
+        @include desktop {
+            padding-bottom: 60px;
+        }
     }
 
     .title-block {
@@ -157,10 +158,10 @@ padding-bottom: 40px;
         color: $main-red-color;
     }
 
-    hr {
-        margin: 0;
+    .copyright {
+        
         margin-bottom: 16px;
-        border-top: 1px solid #FFF5F6;
+        
         width: 100%;
             @include desktop {
                 margin-bottom: 7px;
@@ -168,7 +169,10 @@ padding-bottom: 40px;
 
 }
 
-    .copyright__text {
+    .copyright {
+        padding-top: 16px;
+        border-top: 1px solid #E1E1E1;
+
         font-family: $main-font-family;
         font-weight: 700;
         font-size: 14px;
@@ -177,6 +181,7 @@ padding-bottom: 40px;
         color: $main-text-color;
         margin: 0 auto;
             @include tablet {
+                padding-top: 8px;
                 line-height: 1.9;
         }
     }
