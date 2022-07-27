@@ -5,10 +5,23 @@
         @include desktop {
         padding-top: 60px;
         }
-    }
+        }
     
+    .container.footer {
+        @media screen and (min-width: 320px) {
+                width: 320px;
+            }
+        @media screen and (min-width: 480px) {
+                width: 320px;
+            }
+       @include tablet {
+        width: 768px;
+       }                      
+    }
+        
     .blocks {
         padding-bottom: 40px;
+        width: 100%;
         @include tablet {
            display: flex; 
            justify-content: space-between;
