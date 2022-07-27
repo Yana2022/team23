@@ -40,8 +40,9 @@
 }
 
 .hero__box-for-overflow{
+    position: relative;
     overflow: hidden;
-    width: 100%;
+    width: 100vw;
     
     @include tablet{
         overflow: visible;
@@ -55,7 +56,7 @@
 .hero__main-circle-icon--mob{
     position: absolute;
     animation: appearance 2s $cubic-bezier;
-    top: 83px;
+    bottom: 75px;
     left: 36px;
     width: 346px;
     height: 344px;

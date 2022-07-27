@@ -383,7 +383,9 @@ a {
 }
 
 .hero__box-for-overflow {
+  position: relative;
   overflow: hidden;
+  width: 100vw;
 }
 @media screen and (min-width: 768px) {
   .hero__box-for-overflow {
