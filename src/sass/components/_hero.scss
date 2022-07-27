@@ -41,6 +41,7 @@
 
 .hero__box-for-overflow{
     overflow: hidden;
+    width: 100%;
     
     @include tablet{
         overflow: visible;
