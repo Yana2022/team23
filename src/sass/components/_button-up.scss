@@ -5,7 +5,9 @@
     align-items: center;
     position: fixed;        
     bottom: 20px;
-    right: 20px;        
+    right: 20px; 
+    width: 40px;
+    height: 40px;
     z-index: 999;     
     border: none;
     background-color: $button-hover;
@@ -20,10 +22,6 @@
         background-color: $menu-link-border;
     }
 
-    @include mobile{
-        width: 40px;
-        height: 40px;
-    }
     @include tablet{
         width: 50px;
         height: 50px;

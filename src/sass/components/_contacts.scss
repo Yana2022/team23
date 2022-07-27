@@ -50,23 +50,18 @@
         margin-left: auto;
         margin-right: auto;
         width: 280px;
-        height: 412px;
         padding-left: 32px;
         padding-right: 32px;
 
         &:not(:last-child){
-            margin-bottom: 20px;
+                margin-bottom: 20px;
         }
-
-        &:last-child{
-            margin-bottom: 32px;
-        }
+      
     }
 
     @media screen and (min-width: 768px) and (max-width: 1199.98px) {
         flex-basis: calc((100% - 32px*2)/3);        
         width: 224px;
-        height: 528px;
         padding-left: 33px;
         padding-right: 33px;
         display: flex;
@@ -76,7 +71,6 @@
     
     @include desktop {
         flex-basis: calc((100% - 32px*2)/3);
-        height: 538px;
         padding-left: 40px;
         padding-right: 40px;
     }
@@ -127,7 +121,6 @@
 }
 
 .contact__text{
-    padding-bottom: 24px;
     font-family: $main-font-family;
     @include font(500,12px,1.5,0.04em);
     color: $main-text-color;
@@ -147,6 +140,7 @@
 
 }
 .contact__box{
+    padding-bottom: 24px;
     margin-bottom: 24px;
     border-bottom: 1px solid #E1E1E1;
 
@@ -179,16 +173,6 @@
     }
 }
 
-.contact__item-time:last-child{
-    @include mobile{
-        padding-bottom: 24px;
-    }
-
-    @media screen and (min-width:768px) {
-        padding-bottom: 32px;
-    }
-}
-
 .contact__link {
 
     font-family: $main-font-family;
@@ -210,19 +194,20 @@
 }
 
 
+
 .contact__btn-list {
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    margin-top: 12px;
+    margin-top: 32px;
 
     @include tablet {
         flex-direction: row;
         align-items: center;
         justify-content: center;
         gap: 15px;
-        margin-top: 61px;
+        margin-top: 60px;
     }
 
     @include desktop {
@@ -230,15 +215,17 @@
         margin-top: 60px;
     }
 }
-
+.btn-item:first-child{
+    @media (max-width:767px){
+        margin-bottom: 10px;
+    }
+}
 
 
 .contact__btn {
     display: block;
     width: 161px;
     height: 44px;
-
-    margin-top: 10px;
 
     font-family: $main-font-family;
     font-style: bold;
