@@ -1554,14 +1554,19 @@ a {
     grid-row: 2/3;
   }
 }
-@media screen and (min-width: 320px) and (max-width: 767.98px) {
+@media screen and (min-width: 320px) {
   .section__customer-review {
     padding-bottom: 0;
   }
 }
-@media screen and (min-width: 768px) and (max-width: 1199.98px) {
+@media screen and (min-width: 768px) {
   .section__customer-review {
     padding-bottom: 20px;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .section__customer-review {
+    padding-bottom: 60px;
   }
 }
 
@@ -1670,7 +1675,7 @@ a {
   z-index: -1;
   position: absolute;
   top: -12px;
-  left: 0px;
+  left: 14px;
 }
 @media screen and (min-width: 768px) {
   .customer-review__text::before {
@@ -1683,7 +1688,7 @@ a {
   .customer-review__text::before {
     content: url("/src/images/commas-deck-mob.png");
     top: -14px;
-    left: -9px;
+    left: 0px;
   }
 }
 
@@ -1806,8 +1811,7 @@ a {
 }
 @media screen and (min-width: 768px) and (max-width: 1199.98px) {
   .contact__item {
-    flex-basis: calc((100% - 64px) / 3);
-    width: 224px;
+    flex-basis: calc((100% - 36px - 64px) / 3);
     padding-left: 33px;
     padding-right: 33px;
     display: flex;
@@ -2067,22 +2071,28 @@ a {
 
 .footer {
   background-color: #FFF5F6;
-}
-
-.section.blocks {
-  padding-bottom: 40px;
+  padding-top: 20px;
+  padding-bottom: 3px;
 }
 @media screen and (min-width: 1200px) {
-  .section.blocks {
-    padding-bottom: 60px;
+  .footer {
+    padding-top: 60px;
   }
 }
 
+.blocks {
+  padding-bottom: 40px;
+}
 @media screen and (min-width: 768px) {
   .blocks {
     display: flex;
     justify-content: space-between;
     align-items: center;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .blocks {
+    padding-bottom: 60px;
   }
 }
 
@@ -2198,6 +2208,7 @@ a {
   height: 100%;
   border-radius: 50%;
   background-color: #FEA5BB;
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .social__link:hover, .social__link:focus {
   background-color: #D41443;
@@ -2233,19 +2244,19 @@ a {
   color: #D41443;
 }
 
-hr {
-  margin: 0;
+.copyright {
   margin-bottom: 16px;
-  border-top: 1px solid #FFF5F6;
   width: 100%;
 }
 @media screen and (min-width: 1200px) {
-  hr {
+  .copyright {
     margin-bottom: 7px;
   }
 }
 
-.copyright__text {
+.copyright {
+  padding-top: 16px;
+  border-top: 1px solid #E1E1E1;
   font-family: "DM Sans", sans-serif;
   font-weight: 700;
   font-size: 14px;
@@ -2255,7 +2266,8 @@ hr {
   margin: 0 auto;
 }
 @media screen and (min-width: 768px) {
-  .copyright__text {
+  .copyright {
+    padding-top: 8px;
     line-height: 1.9;
   }
 }
@@ -2323,7 +2335,7 @@ hr {
   height: 100%;
   background-color: rgba(175, 95, 135, 0.747);
   opacity: 1;
-  transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: opacity 800ms cubic-bezier(0.4, 0, 0.2, 1);
   overflow-y: scroll;
 }
 
@@ -2336,8 +2348,8 @@ hr {
   position: absolute;
   top: 50%;
   left: 50%;
-  padding: 40px;
-  transform: translate(-50%, -50%) scale(1);
+  padding: 35px;
+  transform: translate(-50%, -50%);
   width: 100%;
   height: auto;
   font-family: "DM Sans", sans-serif;
@@ -2349,10 +2361,11 @@ hr {
   background-image: linear-gradient(351deg, rgba(235, 176, 48, 0.6) 0%, rgba(230, 47, 161, 0.4) 50%, rgba(238, 137, 145, 0.6) 100%), url(../images/baner-popup.jpg);
   background-repeat: no-repeat;
   background-size: cover;
-  transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transform: translate(-50%, -50%) perspective(600px) translate(0px, 0%) rotateX(0deg);
+  transition: all 800ms cubic-bezier(0.4, 0, 0.2, 1);
 }
-.is-hidden .modal-body {
-  transform: translate(-50%, -50%) scale(0.5);
+.is-hidden-popup .modal-body {
+  transform: translate(-50%, -50%) perspective(600px) translate(0px, -100%) rotateX(45deg);
 }
 .modal-body__title {
   font-family: "DM Sans", sans-serif;
@@ -2382,14 +2395,13 @@ hr {
 .modal-body__field {
   height: 40px;
   padding: 10px 0 10px 42px;
-  border: 2px solid #FFA5BA;
+  border: 1px solid #fff;
   opacity: 85%;
   border-radius: 15px;
-  transition: outline 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .modal-body__field:focus, .modal-body__field:hover {
-  border: none;
-  outline: 1px solid #D41443;
+  border: 1px solid #D41443;
 }
 .modal-body__label {
   padding: 0 0 4px 0;
@@ -2413,14 +2425,13 @@ hr {
   padding: 12px 16px 12px 16px;
   resize: none;
   color: #907E82;
-  border-color: #FFA5BA;
+  border: 1px solid #fff;
   opacity: 85%;
   border-radius: 15px;
   transition: border 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .modal-body__textarea:focus, .modal-body__textarea:hover {
-  border: none;
-  outline: 1px solid #D41443;
+  border: 1px solid #D41443;
 }
 .modal-body__row {
   max-width: 160px;
@@ -2448,6 +2459,7 @@ hr {
   justify-content: center;
   align-items: center;
   margin-bottom: 10px;
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .modal__btn {
@@ -2496,6 +2508,7 @@ hr {
   line-height: 1.71;
   letter-spacing: 0.02em;
   color: #fff;
+  cursor: pointer;
 }
 @media screen and (min-width: 480px) {
   .signing-agreement__label {
