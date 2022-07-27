@@ -1,10 +1,12 @@
 .section__customer-review {
-
-    @media screen and (min-width: 320px) and  (max-width: 767.98px) {
-    padding-bottom: 0;
+    @include mobile {
+        padding-bottom: 0;
     }
-    @media screen and (min-width: 768px) and  (max-width: 1199.98px) {
-    padding-bottom: 20px;
+    @include tablet {
+        padding-bottom: 20px;
+    }
+    @include desktop {
+        padding-bottom: 60px;
     }
 }
 .swiper {
@@ -107,7 +109,7 @@
         z-index: -1;
         position: absolute;
         top: -12px;
-        left: 0px;
+        left: 14px;
         @include tablet {
             content: url("/src/images/commas-tab.png");
             top: -12px;
@@ -116,7 +118,7 @@
         @include desktop {
             content: url("/src/images/commas-deck-mob.png");
             top: -14px;
-            left: -9px;
+            left: 0px;
         }
     }
 }
