@@ -60,8 +60,7 @@
     }
 
     @media screen and (min-width: 768px) and (max-width: 1199.98px) {
-        flex-basis: calc((100% - 32px*2)/3);        
-        width: 224px;
+        flex-basis: calc(((100% - 36px) - 32px*2)/3);
         padding-left: 33px;
         padding-right: 33px;
         display: flex;
