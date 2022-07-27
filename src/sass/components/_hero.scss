@@ -3,6 +3,10 @@
         opacity: 0;
     }
 
+    50% {
+        opacity: 0;
+    }
+
     100% {
         opacity: 1;
     }
@@ -11,7 +15,8 @@
 .hero{
     background-color: $header-bgc;
     position: relative;
-    overflow: hidden;
+    overflow-y: visible;
+    overflow-x: hidden;
 }
 
 .hero__main-circle-icon{
@@ -68,14 +73,20 @@
 }
 
 .hero__girl-photo {
+    display: none;
     position: absolute;
     animation: appearance 2s $cubic-bezier;
     bottom: 1px;
     right: calc(32px + (100% - 768px)/2);
     width: 190px;
 
+    @include tablet{
+        display: block;
+    }
+    
     @include desktop {
         bottom: 0;
+        display: block;
         right: calc(16px + (100% - 1200px)/2);
         width: 304px;
     }
