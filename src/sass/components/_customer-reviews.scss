@@ -15,8 +15,6 @@
 .swiper-slide {
     text-align: center;
     font-size: 18px;
-    // background: rgb(228, 54, 54);
-
     /* Center slide text vertically */
     display: -webkit-box;
     display: -ms-flexbox;
@@ -41,12 +39,21 @@
     font-size: 12px;
     color: #000;
     opacity: 1;
-    background: rgba(16, 211, 65, 0.589);
+    // background: rgba(16, 211, 65, 0.589);
+
+    color: transparent;
+    background-image: url("/src/images/ellipse.svg");
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-color: transparent;
 }
 
 .swiper-pagination-bullet-active {
-    color: #fff;
-    background: #007aff;
+    color: transparent;
+    background-image: url("/src/images/house-svg.svg");
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-color: transparent;
 }
 
 .customer_review__img {
@@ -71,66 +78,75 @@
     z-index: 1;
     color: #000;
     background-color: #fafafa;
-    margin-bottom: 36px;
-    padding: 30px 55px 30px 55px;
+    padding: 4px 37px;
     font-family: DM Sans, sans-serif;
     font-size: 12px;
     font-weight: 500;
     line-height: 2.55;
-    height: 320px;
-    background: repeating-linear-gradient(#fafafa, #fafafa 41px, #e1e1e1 41px, #e1e1e1 43px);
+    background: repeating-linear-gradient(#fafafa, #fafafa 30px, #e1e1e1 30px, #e1e1e1 31px);
     background-position: 100px;
     @include tablet {
-        height: unset;
-        padding: 40px 55px 40px 50px;
-        margin-bottom: 24px;
         font-size: 14px;
         line-height: 2.15;
     }
     @include desktop {
-        height: 138px;
-        padding: 45px 109px 45px 109px;
-        margin-bottom: 36px;
         font-size: 16px;
         line-height: 1.85;
     }
 
+    &::before {
+        content: url("/src/images/commas-deck-mob.png");
+        z-index: -1;
+        position: absolute;
+        top: -12px;
+        left: 0px;
+        @include tablet {
+            content: url("/src/images/commas-tab.png");
+            top: -12px;
+            left: 0px;
+        }
+        @include desktop {
+            content: url("/src/images/commas-deck-mob.png");
+            top: -14px;
+            left: -9px;
+        }
+    }
+}
+
+.customer-review__bg {
+    height: 360px;
+    padding: 35px 26px;
+    background-color: #fafafa;
+    margin-bottom: 36px;
+    @include tablet {
+        height: 165px;
+        margin-bottom: 24px;
+        padding: 35px 26px;
+    }
+    @include desktop {
+        height: 138px;
+        margin-bottom: 36px;
+
+        padding: 32px 72px;
+    }
     &::after {
         content: "...";
         color: #c7133e;
         font-size: 35px;
         display: block;
         position: absolute;
-        bottom: -56px;
-        left: 131px;
+        bottom: 65px;
+        left: 130px;
         @include tablet {
-            bottom: -45px;
+            bottom: 65px;
             left: 300px;
         }
         @include desktop {
-            bottom: -42px;
+            bottom: 74px;
             left: 471px;
         }
     }
-    &::before {
-        content: url("/src/images/commas-deck-mob.png");
-        z-index: -1;
-        position: absolute;
-        top: 20px;
-        left: 15px;
-        @include tablet {
-            content: url("/src/images/commas-tab.png");
-            top: 20px;
-            left: 10px;
-        }
-        @include desktop {
-            content: url("/src/images/commas-deck-mob.png");
-            top: 30px;
-            left: 72px;
-        }
-    }
 }
-
 .customer-review__information {
     margin-bottom: 36px;
     color: #000000;
