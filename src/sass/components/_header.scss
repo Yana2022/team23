@@ -16,6 +16,16 @@
     }
 }
 
+@keyframes go-right {
+    0% {
+        top: -100px;
+    }
+
+    100% {
+        top: 0;
+    }
+}
+
 .header{
 
     @include tablet{
@@ -50,7 +60,9 @@
 }
 
 .header__logo{
-    animation: visibly 1s $cubic-bezier;
+    position: relative;
+    animation: visibly 0.5s $cubic-bezier;
+    animation: go-right 0.5s $cubic-bezier forwards;
 }
 
 
@@ -61,7 +73,7 @@
 }
 
 .header__menu-button{
-    
+    position: relative;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -69,6 +81,7 @@
     border: none;
 
     animation: visibly 1s $cubic-bezier;
+    animation: go-right 0.5s $cubic-bezier forwards;
 
     @include desktop{
         display: none;
@@ -144,8 +157,9 @@
 
 // кнопка купить 
 .header__button {    
-
+    position: relative;
     animation: visibly 1s $cubic-bezier;
+    animation: go-right 0.5s $cubic-bezier forwards;
 
     @include mobile {
         display: block;
@@ -169,12 +183,14 @@
 }
 
 .header__button--tablet{
+    position: relative;
     display: none;
     margin-left: 32px;
     padding-left: 37px;
     padding-right: 37px;   
 
     animation: visibly 1s $cubic-bezier;
+    animation: go-right 0.5s $cubic-bezier forwards;
 
     @media (min-width: 768px) and (max-width:1199px){
         display: block;
@@ -198,8 +214,9 @@
 
 // стилизация ссылок для выпадающего меню
 .header__item {
-
+    position: relative;
     animation: visibly 1s $cubic-bezier;
+    animation: go-right 0.5s $cubic-bezier forwards;
 
     @media screen and (max-width:1199px) {
         padding-top: 12px;
