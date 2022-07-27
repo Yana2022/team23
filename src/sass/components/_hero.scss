@@ -15,14 +15,48 @@
 .hero{
     background-color: $header-bgc;
     position: relative;
-    overflow-y: visible;
-    overflow-x: hidden;
 }
 
 .hero__main-circle-icon{
     position: absolute;
     animation: appearance 2s $cubic-bezier;
-    top: 83px;
+    display: none;
+
+    @include tablet{
+        display: block;
+        top: 43px;
+        left: calc(248px + (100% - 768px)/2);
+        width: 335px;
+        height: 333px;
+    }
+
+     @include desktop{
+        display: block;
+        top: 54px;
+        left: calc(517px + (100% - 1200px)/2);
+        width: 534px;
+        height: 534px;
+    }
+}
+
+.hero__box-for-overflow{
+    position: relative;
+    overflow: hidden;
+    width: 100vw;
+    
+    @include tablet{
+        overflow: visible;
+    }
+
+    @include desktop{
+        overflow: visible;
+    }
+}
+
+.hero__main-circle-icon--mob{
+    position: absolute;
+    animation: appearance 2s $cubic-bezier;
+    bottom: 75px;
     left: 36px;
     width: 346px;
     height: 344px;
@@ -32,17 +66,11 @@
     }
 
     @include tablet{
-        top: 43px;
-        left: calc(248px + (100% - 768px)/2);
-        width: 335px;
-        height: 333px;
+        display: none;
     }
 
-     @include desktop{
-        top: 54px;
-        left: calc(517px + (100% - 1200px)/2);
-        width: 534px;
-        height: 534px;
+    @include desktop{
+        display: none;
     }
 }
 
@@ -56,6 +84,7 @@
     bottom: 0;
     left: 117px;
     width: 171px;
+    z-index: 1;
 
     @media screen and (min-width:480px) {
         left: calc(117px + (100% - 480px)/2);
@@ -96,6 +125,7 @@
     position: relative;
     padding-top: 136px;
     padding-bottom: 158px;
+    z-index: 2;
 
     @include tablet{
         padding-top: 10px;
