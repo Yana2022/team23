@@ -5,13 +5,11 @@
                 #FFF5F6 23%);
     }
 
-
     @media (min-width: 768px) and (max-width: 1199.98px) {
         background-image: linear-gradient(to bottom,
                 #ffffff 45%,
                 #FFF5F6 45%)
     }
-
 
     @include desktop {
         background-image: linear-gradient(to bottom,
@@ -42,7 +40,6 @@
     background-color: $button-bgc;
     box-shadow: 0px 8px 30px rgba(212, 20, 67, 0.1);
     font-family: $main-font-family;
-
 
     @media (min-width:320px) and (max-width: 767px) {
         display: block;
@@ -125,7 +122,6 @@
     color: $main-text-color;
     margin-top: 8px;
 
-
     @media (min-width:768px) and (max-width:1199px) {
         @include font(500, 14px, 1.6, 0.04em);
         padding-bottom: 32px;
@@ -196,7 +192,6 @@
 }
 
 
-
 .contact__btn-list {
     display: flex;
     flex-direction: column;
@@ -223,7 +218,6 @@
         margin-bottom: 10px;
     }
 }
-
 
 .contact__btn {
     display: block;
@@ -288,6 +282,11 @@
 .is-hidden-loc {
     opacity: 0;
     visibility: hidden;
+    pointer-events: none;}
+
+.locations-modal {
+    position: absolute;
+    width: 100%;
     pointer-events: none;
    
 }
@@ -313,6 +312,44 @@
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
+
+    
+    background-color: white;
+    border-radius: 5px;
+    background-color:transparent;
+    
+  
+
+    @media (min-width:768px) and (max-width:1199px) {
+        width: 768px;
+       
+    }
+
+    @include desktop {
+        width: 800px;
+
+    }}
+   
+    .modal-map{
+    width: 100%;
+    height: 600px;
+    padding: 25px;
+    border-radius: 5px;
+      border:transparent;
+     
+
+    @media (min-width:768px) and (max-width:1199px) {
+        width: 768px;
+       
+    }
+
+    @include desktop {
+        width: 800px;
+
+    }
+
+}
+
 
     background-color:transparent;
    
