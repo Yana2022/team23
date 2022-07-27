@@ -19,7 +19,7 @@
 
 .hero__main-circle-icon{
     position: absolute;
-    animation: appearance 2s $cubic-bezier;
+    animation: appearance 1.2s $cubic-bezier;
     display: none;
 
     @include tablet{
@@ -55,7 +55,7 @@
 
 .hero__main-circle-icon--mob{
     position: absolute;
-    animation: appearance 2s $cubic-bezier;
+    animation: appearance 1.2s $cubic-bezier;
     bottom: 75px;
     left: 36px;
     width: 346px;
@@ -80,7 +80,7 @@
 
 .hero__icecream-photo{
     position: absolute;
-    animation: appearance 2s $cubic-bezier;
+    animation: appearance 1.7s $cubic-bezier;
     bottom: 0;
     left: 117px;
     width: 171px;
@@ -242,7 +242,7 @@
 
 .hero__jug-photo {
     width: 152px;
-    animation: appearance 2s $cubic-bezier;
+    animation: appearance 2.5s $cubic-bezier;
 
     @include desktop {
         width: 213px;
