@@ -82,7 +82,7 @@
     bottom: 0;
     left: 117px;
     width: 171px;
-    z-index: 2;
+    z-index: 1;
 
     @media screen and (min-width:480px) {
         left: calc(117px + (100% - 480px)/2);
@@ -123,6 +123,7 @@
     position: relative;
     padding-top: 136px;
     padding-bottom: 158px;
+    z-index: 2;
 
     @include tablet{
         padding-top: 10px;
