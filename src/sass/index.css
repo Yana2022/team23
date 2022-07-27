@@ -117,6 +117,7 @@ a {
 }
 
 .header__container {
+  position: relative;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -177,10 +178,10 @@ a {
 @media screen and (max-width: 1199px) {
   .header__box {
     position: absolute;
-    top: -100%;
+    top: -100vh;
     right: 0;
     transform: translateY(0);
-    min-height: 100%;
+    min-height: 100vh;
     padding-top: 50px;
     padding-left: 20px;
     padding-right: 20px;
@@ -191,7 +192,7 @@ a {
     transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
   }
   .header__box.is-hidden {
-    transform: translateY(100%);
+    transform: translateY(100vh);
   }
 }
 @media (min-width: 320px) and (max-width: 767px) {
@@ -715,46 +716,19 @@ a {
   fill: #ffffff;
 }
 
-.products .container {
-  justify-content: center;
-  padding-left: 20px;
-  padding-right: 20px;
-}
-@media screen and (min-width: 320px) {
-  .products .container {
-    max-width: 480px;
-  }
-}
 @media screen and (min-width: 768px) {
-  .products .container {
-    max-width: 768px;
-    padding-left: 32px;
-    padding-right: 32px;
-  }
-}
-@media screen and (min-width: 1200px) {
-  .products .container {
-    max-width: 1200px;
-    padding-left: 16px;
-    padding-right: 16px;
-    justify-content: center;
-  }
-}
-
-@media screen and (max-width: 767px) {
   .products-blok {
     display: flex;
     justify-content: center;
   }
 }
 
-/*-------------*/
 .products__text {
   font-family: "Titan One";
   font-style: normal;
   font-weight: 400;
   font-size: 18px;
-  line-height: 1.67;
+  line-height: 1.17;
   text-align: center;
   letter-spacing: 0.04em;
   text-transform: uppercase;
@@ -764,7 +738,7 @@ a {
 @media screen and (min-width: 768px) {
   .products__text {
     font-size: 26px;
-    line-height: 30px;
+    line-height: 1.15;
     margin-bottom: 18px;
   }
 }
@@ -786,13 +760,13 @@ a {
   letter-spacing: 0.04em;
   text-transform: uppercase;
   color: #d41443;
-  margin-bottom: 8px;
+  margin-bottom: 148px;
 }
 @media screen and (min-width: 768px) {
   .products__title {
     font-size: 48px;
     line-height: 1.46;
-    margin-bottom: 20px;
+    margin-bottom: 158px;
   }
 }
 @media screen and (min-width: 1200px) {
@@ -800,163 +774,151 @@ a {
     font-size: 58px;
     line-height: 1.14;
     letter-spacing: 0.06em;
+    margin-bottom: 281px;
   }
 }
 
-.products-blok {
-  display: flex;
-  flex-wrap: wrap;
-}
-@media screen and (min-width: 768px) {
-  .products-blok {
-    width: calc((100% - 32px) / 3);
-    gap: 16px;
-    flex-wrap: nowrap;
-  }
-}
-@media screen and (min-width: 1200px) {
-  .products-blok {
-    width: calc((100% - 64px) / 3);
-    gap: 32px;
-  }
-}
-
-.ice-cream .coffe .milkshakes {
-  display: block;
-}
-
-.products-blok__ice-cream {
+.products-blok__item {
+  position: relative;
   width: 280px;
-  height: auto;
-  margin-top: 140px;
+  margin-left: auto;
+  margin-right: auto;
   background: #ffb8ca;
   border-radius: 24px;
   padding: 160px 40px 40px 40px;
 }
 @media screen and (min-width: 768px) {
-  .products-blok__ice-cream {
+  .products-blok__item {
     width: 224px;
-    margin-top: 138px;
     padding: 118px 32px 40px 32px;
+    margin-left: 0;
+    margin-right: 16px;
+  }
+  .products-blok__item .products-blok__item:last-child {
+    margin-right: 0;
   }
 }
 @media screen and (min-width: 1200px) {
-  .products-blok__ice-cream {
-    margin-top: 260px;
+  .products-blok__item {
     width: 368px;
     padding: 160px 60px 60px 60px;
+    margin-right: 32px;
+  }
+  .products-blok__item .products-blok__item:last-child {
+    margin-right: 0;
   }
 }
-
-.ice-creame::before {
+.products-blok__item:nth-child(1)::before {
   content: "";
   position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translate(-50%, -50%);
   background-image: url(/src/images/products-wafer-mob.png);
   width: 280px;
   height: 280px;
 }
 @media screen and (min-width: 768px) {
-  .ice-creame::before {
+  .products-blok__item:nth-child(1)::before {
+    top: -25px;
     background-image: url(/src/images/products-wafer-tab.png);
     width: 224px;
     height: 224px;
   }
 }
 @media screen and (min-width: 1200px) {
-  .ice-creame::before {
+  .products-blok__item:nth-child(1)::before {
+    top: -65px;
     background-image: url(/src/images/products-wafer-deck.png);
     width: 368px;
     height: 394px;
   }
 }
-
-.products-blok__coffe {
-  width: 280px;
-  height: auto;
+.products-blok__item:nth-child(2) {
+  background-color: #f0d1a5;
   margin-top: 140px;
-  background: #f0d1a5;
-  border-radius: 24px;
-  padding: 160px 40px 40px 40px;
+  margin-bottom: 140px;
 }
 @media screen and (min-width: 768px) {
-  .products-blok__coffe {
-    width: 224px;
-    margin-top: 138px;
-    padding: 118px 32px 40px 32px;
+  .products-blok__item:nth-child(2) {
+    margin-top: 0;
+    margin-bottom: 0;
   }
 }
-@media screen and (min-width: 1200px) {
-  .products-blok__coffe {
-    margin-top: 260px;
-    width: 368px;
-    padding: 160px 60px 60px 60px;
-  }
-}
-
-.coffe::before {
+.products-blok__item:nth-child(2)::before {
   content: "";
   position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translate(-50%, -50%);
   background-image: url(/src/images/products-coffee-mob.png);
   width: 280px;
   height: 280px;
 }
 @media screen and (min-width: 768px) {
-  .coffe::before {
+  .products-blok__item:nth-child(2)::before {
+    top: -25px;
     background-image: url(/src/images/products-coffee-tab.png);
     width: 224px;
     height: 224px;
   }
 }
 @media screen and (min-width: 1200px) {
-  .coffe::before {
+  .products-blok__item:nth-child(2)::before {
+    top: -65px;
     background-image: url(/src/images/products-coffee-deck.png);
     width: 368px;
     height: 394px;
   }
 }
-
-.products-blok__milkshakes {
-  width: 280px;
-  height: auto;
-  margin-top: 140px;
-  background: #c2e297;
-  border-radius: 24px;
-  padding: 160px 40px 40px 40px;
+.products-blok__item:nth-child(3) {
+  background-color: #c2e297;
 }
-@media screen and (min-width: 768px) {
-  .products-blok__milkshakes {
-    width: 224px;
-    margin-top: 138px;
-    padding: 118px 32px 40px 32px;
-  }
-}
-@media screen and (min-width: 1200px) {
-  .products-blok__milkshakes {
-    margin-top: 260px;
-    width: 368px;
-    padding: 160px 60px 60px 60px;
-  }
-}
-
-.milkshakes::before {
+.products-blok__item:nth-child(3)::before {
   content: "";
   position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translate(-50%, -50%);
   background-image: url(/src/images/products-milkshakes-mob.png);
   width: 280px;
   height: 280px;
 }
 @media screen and (min-width: 768px) {
-  .milkshakes::before {
+  .products-blok__item:nth-child(3)::before {
+    top: -25px;
     background-image: url(/src/images/products-milkshakes-tab.png);
     width: 224px;
     height: 224px;
   }
 }
 @media screen and (min-width: 1200px) {
-  .milkshakes::before {
+  .products-blok__item:nth-child(3)::before {
+    top: -65px;
     background-image: url(/src/images/products-milkshakes-deck.png);
     width: 368px;
     height: 394px;
+  }
+}
+.products-blok__item::after {
+  content: "";
+  position: absolute;
+  color: #ffffff;
+  background-image: url(/src/images/white-dots.png);
+  width: 26px;
+  height: 6px;
+  bottom: 268px;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+@media screen and (min-width: 768px) {
+  .products-blok__item::after {
+    bottom: 294px;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .products-blok__item::after {
+    bottom: 298px;
   }
 }
 
@@ -970,22 +932,13 @@ a {
   letter-spacing: 0.04em;
   text-transform: uppercase;
   color: #ffffff;
-  margin-bottom: 32px;
-  flex-wrap: wrap;
+  margin-bottom: 70px;
 }
 @media screen and (min-width: 1200px) {
   .products-blok__title {
     font-size: 30px;
     line-height: 1.13;
   }
-}
-.products-blok__title::after {
-  content: "...";
-  display: flex;
-  color: #ffffff;
-  text-align: center;
-  justify-content: center;
-  margin-top: 32px;
 }
 
 .products-blok__text {
@@ -1001,11 +954,15 @@ a {
 }
 @media screen and (min-width: 768px) {
   .products-blok__text {
+    height: 150px;
+    overflow: hidden;
     line-height: 1.76;
   }
 }
 @media screen and (min-width: 1200px) {
   .products-blok__text {
+    height: 106px;
+    overflow: hidden;
     font-size: 16px;
     line-height: 1.76;
     margin-bottom: 60px;
@@ -2396,7 +2353,7 @@ a {
   height: 100%;
   background-color: rgba(175, 95, 135, 0.747);
   opacity: 1;
-  transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: opacity 800ms cubic-bezier(0.4, 0, 0.2, 1);
   overflow-y: scroll;
 }
 
@@ -2409,23 +2366,24 @@ a {
   position: absolute;
   top: 50%;
   left: 50%;
-  padding: 40px;
-  transform: translate(-50%, -50%) scale(1);
+  padding: 35px;
+  transform: translate(-50%, -50%);
   width: 100%;
   height: auto;
   font-family: "DM Sans", sans-serif;
   font-weight: 700;
   font-size: 16px;
-  line-height: 1.16;
+  line-height: 1.15;
   letter-spacing: 0.01em;
   color: #D41443;
   background-image: linear-gradient(351deg, rgba(235, 176, 48, 0.6) 0%, rgba(230, 47, 161, 0.4) 50%, rgba(238, 137, 145, 0.6) 100%), url(../images/baner-popup.jpg);
   background-repeat: no-repeat;
   background-size: cover;
-  transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transform: translate(-50%, -50%) perspective(600px) translate(0px, 0%) rotateX(0deg);
+  transition: all 800ms cubic-bezier(0.4, 0, 0.2, 1);
 }
-.is-hidden .modal-body {
-  transform: translate(-50%, -50%) scale(0.5);
+.is-hidden-popup .modal-body {
+  transform: translate(-50%, -50%) perspective(600px) translate(0px, -100%) rotateX(45deg);
 }
 .modal-body__title {
   font-family: "DM Sans", sans-serif;
@@ -2455,14 +2413,13 @@ a {
 .modal-body__field {
   height: 40px;
   padding: 10px 0 10px 42px;
-  border: 2px solid #FFA5BA;
+  border: 1px solid #fff;
   opacity: 85%;
   border-radius: 15px;
-  transition: outline 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .modal-body__field:focus, .modal-body__field:hover {
-  border: none;
-  outline: 1px solid #D41443;
+  border: 1px solid #D41443;
 }
 .modal-body__label {
   padding: 0 0 4px 0;
@@ -2486,14 +2443,13 @@ a {
   padding: 12px 16px 12px 16px;
   resize: none;
   color: #907E82;
-  border-color: #FFA5BA;
+  border: 1px solid #fff;
   opacity: 85%;
   border-radius: 15px;
   transition: border 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .modal-body__textarea:focus, .modal-body__textarea:hover {
-  border: none;
-  outline: 1px solid #D41443;
+  border: 1px solid #D41443;
 }
 .modal-body__row {
   max-width: 160px;
@@ -2521,6 +2477,7 @@ a {
   justify-content: center;
   align-items: center;
   margin-bottom: 10px;
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .modal__btn {
@@ -2569,6 +2526,7 @@ a {
   line-height: 1.71;
   letter-spacing: 0.02em;
   color: #fff;
+  cursor: pointer;
 }
 @media screen and (min-width: 480px) {
   .signing-agreement__label {
