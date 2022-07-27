@@ -355,11 +355,48 @@ a {
 .hero {
   background-color: #FFB8CA;
   position: relative;
-  overflow-x: hidden;
-  overflow-y: visible;
 }
 
 .hero__main-circle-icon {
+  position: absolute;
+  -webkit-animation: appearance 2s cubic-bezier(0.4, 0, 0.2, 1);
+          animation: appearance 2s cubic-bezier(0.4, 0, 0.2, 1);
+  display: none;
+}
+@media screen and (min-width: 768px) {
+  .hero__main-circle-icon {
+    display: block;
+    top: 43px;
+    left: calc(248px + (100% - 768px) / 2);
+    width: 335px;
+    height: 333px;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .hero__main-circle-icon {
+    display: block;
+    top: 54px;
+    left: calc(517px + (100% - 1200px) / 2);
+    width: 534px;
+    height: 534px;
+  }
+}
+
+.hero__box-for-overflow {
+  overflow: hidden;
+}
+@media screen and (min-width: 768px) {
+  .hero__box-for-overflow {
+    overflow: visible;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .hero__box-for-overflow {
+    overflow: visible;
+  }
+}
+
+.hero__main-circle-icon--mob {
   position: absolute;
   -webkit-animation: appearance 2s cubic-bezier(0.4, 0, 0.2, 1);
           animation: appearance 2s cubic-bezier(0.4, 0, 0.2, 1);
@@ -369,24 +406,18 @@ a {
   height: 344px;
 }
 @media screen and (min-width: 480px) {
-  .hero__main-circle-icon {
+  .hero__main-circle-icon--mob {
     left: calc(36px + (100% - 480px) / 2);
   }
 }
 @media screen and (min-width: 768px) {
-  .hero__main-circle-icon {
-    top: 43px;
-    left: calc(248px + (100% - 768px) / 2);
-    width: 335px;
-    height: 333px;
+  .hero__main-circle-icon--mob {
+    display: none;
   }
 }
 @media screen and (min-width: 1200px) {
-  .hero__main-circle-icon {
-    top: 54px;
-    left: calc(517px + (100% - 1200px) / 2);
-    width: 534px;
-    height: 534px;
+  .hero__main-circle-icon--mob {
+    display: none;
   }
 }
 
