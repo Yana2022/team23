@@ -131,14 +131,7 @@
     max-width: 288px;
   }
 }
-/*.section-item_1 {
-  @include tablet {
-    margin-left: 32px;
-  }
-  @include desktop {
-    margin-left: 16px;
-  }
-}*/
+
 .section-item_2 {
   @include tablet {
     margin-left: 4px;
