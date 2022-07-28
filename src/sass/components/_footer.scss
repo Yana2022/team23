@@ -8,11 +8,9 @@
         }
     
     .container.footer {
-        @include mobile {
-                width: 320px;
-            }
+        
         @media screen and (min-width: 480px) {
-                width: 320px;
+                width: 480px;
             }
         @include tablet {
         width: 768px;
