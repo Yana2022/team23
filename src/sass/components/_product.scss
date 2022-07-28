@@ -70,7 +70,7 @@
   padding: 160px 40px 40px 40px;
 
   @media screen and (min-width: 768px) {
-    width: 224px;    
+    width: calc((100% - 32px) / 3);    
     padding: 118px 32px 40px 32px;
     margin-left: 0;
     margin-right: 16px;
@@ -81,7 +81,7 @@
   }
 
   @media screen and (min-width: 1200px) {    
-    width: 368px;
+    width: calc((100% - 64px) / 3);
     padding: 160px 60px 60px 60px;
     margin-right: 32px;    
     &:last-child {
