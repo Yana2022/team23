@@ -9,10 +9,10 @@
 
 @keyframes grow-link{
     0%{
-        font-size: 14px;
+        top: 0;
     }
     100%{
-        font-size: 16px;
+        top: -5px;
     }
 }
 
@@ -80,7 +80,7 @@
     background-color: transparent;
     border: none;
 
-    animation: visibly 1s $cubic-bezier;
+    animation: visibly 0.5s $cubic-bezier;
     animation: go-right 0.5s $cubic-bezier forwards;
 
     @include desktop{
@@ -95,8 +95,6 @@
     position: absolute;
     top: 20px;
     right: 20px;
-
-    animation: visibly 1s $cubic-bezier;
 }
 
 // выпадающее меню
@@ -112,7 +110,7 @@
         padding-right: 20px;  
         z-index: 100;      
         background-color: $menu-bgc;
-        @include animation(transform);
+        transition: transform 500ms $cubic-bezier;
 
         &.is-hidden{
             transform: translateY(100vh);
@@ -234,6 +232,7 @@
 }
 
 .header__link {
+    position: relative;
     @include font(700, 14px, calc(18 /14), 0.03);
     font-family: $main-font-family;
     color: $button-bgc;
@@ -256,5 +255,9 @@
     @include desktop {
         padding-top: 20px;
         padding-bottom: 20px;
+        &:hover,
+        &:focus {
+                animation: grow-link 250ms $cubic-bezier forwards;
+            }
     }
 }
