@@ -1,25 +1,21 @@
 .advantages-section {
-  background-color: #FFF5F6;
+  background-color: #fff5f6;
 
   @media screen and (min-width: 480px) and (max-width: 767px) {
     padding-top: 40px;
-    }
+  }
 
   .advantages__list {
     display: flex;
     flex-direction: column;
     margin-left: auto;
     margin-right: auto;
-    
-    @include mobile {
-      width: 320px;
-    }
-  
+
     @include tablet {
-      width: 768px;
+      justify-content: space-between;
       flex-direction: row;
     }
-  
+
     @include desktop {
       width: 1200px;
     }
@@ -135,14 +131,14 @@
     max-width: 288px;
   }
 }
-.section-item_1 {
+/*.section-item_1 {
   @include tablet {
     margin-left: 32px;
   }
   @include desktop {
     margin-left: 16px;
   }
-}
+}*/
 .section-item_2 {
   @include tablet {
     margin-left: 4px;
