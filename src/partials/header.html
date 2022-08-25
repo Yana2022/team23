@@ -79,6 +79,7 @@
           class="header__button--tablet header__button--basic"
           type="button"
           data-menu
+          data-open-popup
         >
           Buy now
           <svg class="header__button--arrow" width="6" height="8">
@@ -197,7 +198,11 @@
             Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
             eiusmod tempor incididunt ut labore et
           </p>
-          <button type="button" class="hero__arrow" aria-label="description"></button>
+          <button
+            type="button"
+            class="hero__arrow"
+            aria-label="description"
+          ></button>
         </div>
       </div>
       <ul class="hero__amounts">
@@ -230,7 +235,12 @@
   </div>
   <div class="backdrop is-hidden-popup" data-modal-popup>
     <div class="modal-body">
-      <button class="btn modal__btn" type="button" data-close-popup aria-label="modal button">
+      <button
+        class="btn modal__btn"
+        type="button"
+        data-close-popup
+        aria-label="modal button"
+      >
         <svg class="btn__icon">
           <use href="./images/icons.svg#burger-close"></use>
         </svg>
