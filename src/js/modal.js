@@ -5,6 +5,7 @@
     modal: document.querySelector("[data-mobile-modal]"),
   };
 
+
   refs.openModalBtn.addEventListener("click", toggleModal);
   refs.closeModalBtn.addEventListener("click", toggleModal);
 

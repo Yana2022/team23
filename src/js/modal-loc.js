@@ -5,10 +5,33 @@
       modal: document.querySelector("[data-loc]"),
     };
   
-    refs.openModalBtn.addEventListener("click", toggleModal);
-    refs.closeModalBtn.addEventListener("click", toggleModal);
+    refs.openModalBtn.addEventListener("click", openModalLocation);
+  refs.closeModalBtn.addEventListener("click", closeModalLocation);
+  refs.modal.addEventListener('click', onClickCloseModalLocation)
   
-    function toggleModal() {
+    function openModalLocation() {
       refs.modal.classList.toggle("is-hidden-loc");
+      window.addEventListener('keydown', onEscCloseModalLocation)
+  }
+
+  function closeModalLocation() {
+    refs.modal.classList.toggle("is-hidden-loc");
+    window.removeEventListener('keydown', onEscCloseModalLocation)
+  }
+
+  function onEscCloseModalLocation(e) {
+    const ESC_CODE_MODAL = 'Escape';
+    
+    if (e.code === ESC_CODE_MODAL) {
+      closeModalLocation()
     }
+  }
+
+  function onClickCloseModalLocation(e) {
+    if (e.target === e.currentTarget) {
+       closeModalLocation()
+    }
+  }
+  
+
   })();
