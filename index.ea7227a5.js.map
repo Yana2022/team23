@@ -1,0 +1,1 @@
+{"mappings":"AAAc,IAAIA,eAAe,cACzBC,QAAQC,UAAW","sources":["src/index.js"],"sourcesContent":["let gallery = new SimpleLightbox('.gallery a');\ngallery.options.captions = false;\n"],"names":["SimpleLightbox","options","captions"],"version":3,"file":"index.ea7227a5.js.map"}
