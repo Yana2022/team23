@@ -21,7 +21,7 @@
             #ffffff 44px);
     }
 
-    .gallery__thumb {
+    .gallery {
         display: grid;
         grid-template-columns: repeat(6, 2fr);
         grid-template-rows: repeat(2, 44px);
@@ -100,7 +100,7 @@
             #ffffff 168px);
     }
 
-    .gallery__thumb {
+    .gallery {
         display: grid;
         grid-template-columns: repeat(6, 2fr);
         grid-template-rows: repeat(2, 104px);
@@ -174,7 +174,7 @@
         padding-top: 60;
         padding-bottom: 60;
         }
-    .gallery__thumb {
+    .gallery {
         display: grid;
         grid-template-columns: repeat(6, 2fr);
         grid-template-rows: repeat(2, 138px);
